@@ -1,0 +1,93 @@
+{
+    "meta" : {
+        "name"        : string, 
+        "description" : string
+    },
+    "contexts" : {
+        "context-a" : {
+            "summary" : {
+                "start"    : float, 
+                "end"      : float,
+                "skipped"  : float,
+                "duration" : {
+                    "with_skipped" : float,
+                    "no_skipped"   : float
+                }
+            }, 
+            "units" : {
+                "unit-a" : {
+                    "start"    : float, 
+                    "end"      : float,
+                    "skipped"  : float, 
+                    "duration" : {
+                        "with_skipped" : float, 
+                        "no_skipped"   : float
+                    }
+                }, 
+                "unit-b" : {
+                    ...
+                }, 
+                ...
+            }, 
+            "units_summary" : {
+                "meta" : {
+                    "outliers" : {
+                        "std" : float, 
+                        "bounds" : {
+                            "lower" : float, 
+                            "upper" : float, 
+                        }, 
+                        "qty" : {
+                            "below_lb"  : int, 
+                            "above_ub"  : int, 
+                            "total"     : int, 
+                            "perc_below_lb" : float, 
+                            "perc_above_up  : float,
+                            "perc_total"    : float 
+                        }
+                    }
+                },
+                "with_outliers" : {
+                    "n_units"   : integer, 
+                    "mean"      : float, 
+                    "mode"      : float, 
+                    "med"       : float, 
+                    "var"       : float, 
+                    "std"       : float, 
+                    "cv"        : float,
+                    "skew"      : float, 
+                    "kurt"      : float, 
+                    "percentiles" : {
+                        "1"     : float,
+                        "5"     : float, 
+                        "10"    : float,
+                        "20"    : float,
+                        "25"    : float, 
+                        "50"    : float,
+                        "75"    : float, 
+                        "80"    : float,
+                        "90"    : float, 
+                        "95"    : float, 
+                        "99"    : float
+                    },
+                    "normality" : {
+                        "sw"  : float, 
+                        "ks"  : float, 
+                        "ad"  : float
+                    }, 
+                    "stationairy" : {
+                        "adf"   : float, 
+                        "kpss"  : float
+                    }
+                }, 
+                "no_outliers" : {
+                    ...
+                }
+            }
+        }, 
+        "context-b" : {
+            ...
+        },
+        ...
+    }
+}
