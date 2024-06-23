@@ -6,11 +6,16 @@ from .context import Context
 from .benchmark_item import BenchmarkItem
 
 class Benchmarker(BenchmarkItem):
+
+
     """ 
         Benchmarker class used to create a group of benchmark contexts. 
     """
 
     def __init__(self, **kwargs):
+        
+        self.Context = kwargs.get("Context", Context) 
+
         BenchmarkItem.__init__(self, **kwargs)
         
         self.contexts = {} 
@@ -45,7 +50,7 @@ class Benchmarker(BenchmarkItem):
         """ 
         
         # create new context
-        context = Context(
+        context = self.Context(
             name=name, 
             description=description,
             with_units=with_units
@@ -55,6 +60,7 @@ class Benchmarker(BenchmarkItem):
         self.contexts[name] = context 
         
         return context
+
 
    
 

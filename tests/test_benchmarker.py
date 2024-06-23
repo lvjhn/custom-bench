@@ -1,4 +1,5 @@
 from unittest.mock import Mock, MagicMock, patch
+import unittest
 
 import uuid 
 import datetime
@@ -36,7 +37,7 @@ class TestBenchmarker:
                 "%Y-%m-%d %H:%M:%S"
             )
         )
-        
+
     #
     # Test .has_context() method. 
     #          
@@ -82,7 +83,8 @@ class TestBenchmarker:
     # Test .create_context() 
     # 
     def test_create_context(self):
-        benchmarker = Benchmarker()
+
+        benchmarker = Benchmarker(Context=Mock())
 
         result = benchmarker.create_context(
             "test-context", 
@@ -92,6 +94,10 @@ class TestBenchmarker:
 
         assert(result is not None)
         assert("test-context" in benchmarker.contexts)
-        assert(type(benchmarker.contexts["test-context"]) is context.Context)
+        assert(benchmarker.contexts["test-context"] is not None)
 
-    
+        benchmarker.Context.assert_called_with(
+            name="test-context",
+            description="test-description",
+            with_units=True
+        )
