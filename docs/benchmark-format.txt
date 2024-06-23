@@ -14,21 +14,6 @@
                     "no_skipped"   : float
                 }
             }, 
-            "units" : {
-                "unit-a" : {
-                    "start"    : float, 
-                    "end"      : float,
-                    "skipped"  : float, 
-                    "duration" : {
-                        "with_skipped" : float, 
-                        "no_skipped"   : float
-                    }
-                }, 
-                "unit-b" : {
-                    ...
-                }, 
-                ...
-            }, 
             "units_summary" : {
                 "meta" : {
                     "outliers" : {
@@ -40,10 +25,16 @@
                         "qty" : {
                             "below_lb"  : int, 
                             "above_ub"  : int, 
-                            "total"     : int, 
-                            "perc_below_lb" : float, 
-                            "perc_above_up  : float,
-                            "perc_total"    : float 
+                            "total"     : int
+                        },
+                        "perc_total" : {
+                            "below_lb" : float, 
+                            "above_up  : float,
+                            "both"     : float
+                        },
+                        perc_outlier" : {
+                            "below_lb" : float, 
+                            "above_up  : float
                         }
                     }
                 },
@@ -51,12 +42,12 @@
                     "n_units"   : integer, 
                     "mean"      : float, 
                     "mode"      : float, 
-                    "med"       : float, 
-                    "var"       : float, 
-                    "std"       : float, 
-                    "cv"        : float,
-                    "skew"      : float, 
-                    "kurt"      : float, 
+                    "median"    : float, 
+                    "variance"  : float, 
+                    "std_dev"   : float, 
+                    "coef_var"  : float,
+                    "skewness"  : float, 
+                    "kurtosis"  : float, 
                     "percentiles" : {
                         "1"     : float,
                         "5"     : float, 
@@ -65,7 +56,6 @@
                         "25"    : float, 
                         "50"    : float,
                         "75"    : float, 
-                        "80"    : float,
                         "90"    : float, 
                         "95"    : float, 
                         "99"    : float
@@ -83,7 +73,23 @@
                 "no_outliers" : {
                     ...
                 }
-            }
+            },
+            "units" : {
+                    "unit-a" : {
+                        "start"    : float, 
+                        "end"      : float,
+                        "skipped"  : float, 
+                        "duration" : {
+                            "with_skipped" : float, 
+                            "no_skipped"   : float
+                        }
+                    }, 
+                    "unit-b" : {
+                        ...
+                    }, 
+                    ...
+                }
+            }, 
         }, 
         "context-b" : {
             ...

@@ -1,0 +1,273 @@
+{
+    "meta": {
+        "name": "benchmark-a",
+        "description": "A simple benchmark."
+    },
+    "summary": {
+        "start": 1.274518364,
+        "end": 1.285490461,
+        "skipped": 1.4959000000036582e-05,
+        "duration": {
+            "with_skipped": 0.010972097000000014,
+            "no_skipped": 0.010957137999999977
+        }
+    },
+    "contexts_summary": {
+        "meta": {
+            "outliers": {
+                "std_devs": 2,
+                "bounds": {
+                    "lower": null,
+                    "upper": null
+                },
+                "qty": {
+                    "below_lb": null,
+                    "above_up": null
+                },
+                "perc_total": {
+                    "below_lb": null,
+                    "above_up": null,
+                    "both": null
+                },
+                "perc_outlier": {
+                    "below_lb": null,
+                    "above_up": null
+                }
+            }
+        },
+        "with_outliers": {
+            "n_items": null,
+            "mean": null,
+            "mode": null,
+            "med": null,
+            "var": null,
+            "std": null,
+            "cv": null,
+            "skew": null,
+            "kurt": null,
+            "percentiles": {
+                "1": null,
+                "5": null,
+                "10": null,
+                "20": null,
+                "25": null,
+                "50": null,
+                "75": null,
+                "80": null,
+                "90": null,
+                "95": null,
+                "99": null
+            },
+            "normality": {
+                "sw": null,
+                "ks": null,
+                "ad": null
+            },
+            "stationarity": {
+                "adf": null,
+                "kpss": null
+            }
+        },
+        "no_outliers": {
+            "n_items": null,
+            "mean": null,
+            "mode": null,
+            "med": null,
+            "var": null,
+            "std": null,
+            "cv": null,
+            "skew": null,
+            "kurt": null,
+            "percentiles": {
+                "1": null,
+                "5": null,
+                "10": null,
+                "20": null,
+                "25": null,
+                "50": null,
+                "75": null,
+                "80": null,
+                "90": null,
+                "95": null,
+                "99": null
+            },
+            "normality": {
+                "sw": null,
+                "ks": null,
+                "ad": null
+            },
+            "stationarity": {
+                "adf": null,
+                "kpss": null
+            }
+        }
+    },
+    "contexts": {
+        "context-1": {
+            "meta": {
+                "name": "814aa4c1-c79a-4f28-aece-22d92a31f7d5",
+                "description": "Some random context."
+            },
+            "summary": {
+                "start": 1.274622499,
+                "end": 1.274767271,
+                "skipped": 1.4959000000036582e-05,
+                "duration": {
+                    "with_skipped": 0.00014477200000007073,
+                    "no_skipped": 0.00012981300000003415
+                }
+            },
+            "units_summary": {
+                "meta": {
+                    "outliers": {
+                        "std": 2,
+                        "bounds": {
+                            "lower": 2.331485630499295e-06,
+                            "upper": 7.68651436954564e-06
+                        },
+                        "qty": {
+                            "below_lb": 0,
+                            "above_ub": 0,
+                            "total": 0
+                        },
+                        "perc_total": {
+                            "below_lb": 0.0,
+                            "above_ub": 0.0,
+                            "both": 0.0
+                        },
+                        "perc_outlier": {
+                            "below_lb": 0,
+                            "above_ub": 0
+                        }
+                    }
+                },
+                "with_outliers": {
+                    "n_units": 5,
+                    "mean": 5.009000000022467e-06,
+                    "mode": 4.237000000184565e-06,
+                    "mode_count": 1.0,
+                    "median": 4.378000000082594e-06,
+                    "variance": 1.7922707997507679e-12,
+                    "std_dev": 1.3387571847615863e-06,
+                    "skewness": 1.4929047390671517,
+                    "kurtosis": 0.2407487315796768,
+                    "percentiles": {
+                        "1": 4.241000000178019e-06,
+                        "5": 4.257000000151834e-06,
+                        "10": 4.277000000119102e-06,
+                        "20": 4.317000000053639e-06,
+                        "25": 4.3370000000209075e-06,
+                        "50": 4.378000000082594e-06,
+                        "75": 4.40899999998301e-06,
+                        "80": 5.063999999954661e-06,
+                        "90": 6.373999999897962e-06,
+                        "95": 6.373999999897962e-06
+                    },
+                    "normality": {
+                        "sw": 0.0005305791641515323,
+                        "ks": 0.1119977586548888,
+                        "ad": 0.0017259287169096229
+                    },
+                    "stationarity": {
+                        "adf": 0.0,
+                        "kpss": 0.1
+                    }
+                },
+                "no_outliers": {
+                    "n_units": 5,
+                    "mean": 5.009000000022467e-06,
+                    "mode": 4.237000000184565e-06,
+                    "mode_count": 1.0,
+                    "median": 4.378000000082594e-06,
+                    "variance": 1.7922707997507679e-12,
+                    "std_dev": 1.3387571847615863e-06,
+                    "skewness": 1.4929047390671517,
+                    "kurtosis": 0.2407487315796768,
+                    "percentiles": {
+                        "1": 4.241000000178019e-06,
+                        "5": 4.257000000151834e-06,
+                        "10": 4.277000000119102e-06,
+                        "20": 4.317000000053639e-06,
+                        "25": 4.3370000000209075e-06,
+                        "50": 4.378000000082594e-06,
+                        "75": 4.40899999998301e-06,
+                        "80": 5.063999999954661e-06,
+                        "90": 6.373999999897962e-06,
+                        "95": 6.373999999897962e-06
+                    },
+                    "normality": {
+                        "sw": 0.0005305791641515323,
+                        "ks": 0.1119977586548888,
+                        "ad": 0.0017259287169096229
+                    },
+                    "stationarity": {
+                        "adf": 0.0,
+                        "kpss": 0.1
+                    }
+                }
+            },
+            "units": {
+                "unit-0": {
+                    "description": "An untitled unit.",
+                    "result": {
+                        "start": 1.274650863,
+                        "end": 1.274661723,
+                        "skipped": 3.1760000001046507e-06,
+                        "duration": {
+                            "with_skipped": 1.0859999999945913e-05,
+                            "no_skipped": 7.683999999841262e-06
+                        }
+                    }
+                },
+                "unit-1": {
+                    "description": "An untitled unit.",
+                    "result": {
+                        "start": 1.274682562,
+                        "end": 1.274689956,
+                        "skipped": 3.015999999966823e-06,
+                        "duration": {
+                            "with_skipped": 7.394000000049417e-06,
+                            "no_skipped": 4.378000000082594e-06
+                        }
+                    }
+                },
+                "unit-2": {
+                    "description": "An untitled unit.",
+                    "result": {
+                        "start": 1.274708441,
+                        "end": 1.274715454,
+                        "skipped": 2.6040000000726593e-06,
+                        "duration": {
+                            "with_skipped": 7.013000000055669e-06,
+                            "no_skipped": 4.40899999998301e-06
+                        }
+                    }
+                },
+                "unit-3": {
+                    "description": "An untitled unit.",
+                    "result": {
+                        "start": 1.274732907,
+                        "end": 1.27473998,
+                        "skipped": 2.8359999999505447e-06,
+                        "duration": {
+                            "with_skipped": 7.07300000013511e-06,
+                            "no_skipped": 4.237000000184565e-06
+                        }
+                    }
+                },
+                "unit-4": {
+                    "description": "An untitled unit.",
+                    "result": {
+                        "start": 1.274757323,
+                        "end": 1.274764987,
+                        "skipped": 3.326999999941904e-06,
+                        "duration": {
+                            "with_skipped": 7.663999999962812e-06,
+                            "no_skipped": 4.3370000000209075e-06
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
