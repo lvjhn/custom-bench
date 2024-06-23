@@ -56,6 +56,7 @@ class Benchmarker(BenchmarkItem):
         context = self.Context(
             name=name, 
             description=description,
+            benchmarker=self,
             with_units=with_units
         )
 

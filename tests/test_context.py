@@ -90,8 +90,9 @@ class TestContext:
         assert("test-unit" in context.units["items"])
         assert(context.units["items"]["test-unit"] is not None)
 
-        context.Context.assert_called_with(
+        context.Unit.assert_called_with(
             name="test-unit",
-            description="test-description"
+            description="test-description",
+            context=context
         )
  

@@ -1,6 +1,9 @@
 import time 
 
-class Unit: 
+import custom_bench.templates as templates
+from .benchmark_item import BenchmarkItem
+
+class Unit(BenchmarkItem): 
     """ 
         Unit class which can defines a single unit of 
         testing in a context.
@@ -8,23 +11,19 @@ class Unit:
 
     def __init__(self, **kwargs): 
         """ 
-            Creates a new Unit object. 
-
-            Args: 
-                ...
-                **name (string) : 
-                    The name of the benchmark set. 
-                **description (string) : 
-                    Brief description of what the benchmark is about. 
-                ...
+            Creates a new Unit object.
         """  
 
-        # Parameters #
+        # Parameters 
         self.name = \
             kwargs.get("name", self.default_unit_name()) 
         self.description = \
             kwargs.get("description", self.default_unit_description())
+        self.context = \
+            kwargs.get("context", None)
 
+        # Summary 
+        self.summary = templates.general_summary
 
     def default_unit_name(self): 
         """ 

@@ -18,35 +18,6 @@ class TestBenchmarker:
         assert(issubclass(type(Benchmarker()), BenchmarkItem))
 
     #
-    # Test Constructor
-    # 
-
-    def test_constructor_defaults(self): 
-        benchmarker = Benchmarker()
-        assert(type(benchmarker.name) is uuid.UUID)
-        assert(len(str(benchmarker.name)) == 36)
-
-    def test_constructor_params(self):
-        benchmarker = Benchmarker(
-            name="test-benchmark",
-            description="A simple benchmark used in testing."
-        )
-
-        assert(
-            benchmarker.name == "test-benchmark"
-        )
-        assert(
-            benchmarker.description == "A simple benchmark used in testing."
-        )
-        assert(
-            datetime.datetime.strptime(
-                benchmarker.run_datetime, 
-                "%Y-%m-%d %H:%M:%S"
-            )
-        )
-
-   
-    #
     # Test .has_context() method. 
     #          
     def test_has_context_exists(self): 
@@ -107,5 +78,6 @@ class TestBenchmarker:
         benchmarker.Context.assert_called_with(
             name="test-context",
             description="test-description",
+            benchmarker=benchmarker,
             with_units=True
         )

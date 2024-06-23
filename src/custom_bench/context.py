@@ -24,6 +24,8 @@ class Context(BenchmarkItem):
             kwargs.get("name", self.default_context_name()) 
         self.description = \
             kwargs.get("description", self.default_context_description())
+        self.benchmark = \
+            kwargs.get("benchmark", None)
         self.with_units = \
             kwargs.get("with_units", False)
 
@@ -83,7 +85,8 @@ class Context(BenchmarkItem):
         # create new context
         unit = self.Unit(
             name=name, 
-            description=description
+            description=description,
+            context=self
         )
 
         # add context to context container
