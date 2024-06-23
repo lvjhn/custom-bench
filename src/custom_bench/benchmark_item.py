@@ -2,39 +2,33 @@ import uuid
 import datetime 
 import time
 
+import custom_bench.templates as templates
+
 class BenchmarkItem:
     def __init__(self, **kwargs): 
         """
             Creates a benchmark item (either a Benchmark, Context, or Unit)
         """ 
-        # Parameters #
+        # Parameters 
         self.name = \
             kwargs.get("name", uuid.uuid4()) 
         self.description = \
             kwargs.get("description", "A simple benchmark.")
     
-        # Automatically Initialized Variables # 
+        # Automatically Initialized Variables 
         self.run_datetime = \
             datetime.datetime.today().strftime("%Y-%m-%d %H:%M:%S")
 
-        # Meta Info. # 
+        # Meta Info. 
         self.meta = { 
             "name"        : self.name, 
             "description" : self.description 
         }
 
-        # Summary Info. #
-        self.summary = {
-            "start" : None, 
-            "end" : None, 
-            "skipped" : 0, 
-            "duration" : {
-                "with_skipped" : 0,
-                "no_skipped"   : 0
-            }
-        }
+        # Summary Info. 
+        self.summary = templates.general_summary.copy()
 
-        # Combined State #
+        # Combined State 
         self.state = {
             "meta"     : self.meta, 
             "summary"  : self.summary

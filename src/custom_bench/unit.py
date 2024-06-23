@@ -1,5 +1,5 @@
 
-class Context: 
+class Unit: 
     """ 
         Unit class which can defines a single unit of 
         testing in a context.

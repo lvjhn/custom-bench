@@ -4,23 +4,26 @@ import time
 
 from .context import Context
 from .benchmark_item import BenchmarkItem
+import custom_bench.templates as templates
 
 class Benchmarker(BenchmarkItem):
-
-
     """ 
         Benchmarker class used to create a group of benchmark contexts. 
     """
 
     def __init__(self, **kwargs):
-        
+        """ 
+            Creates a new benchmarker object.
+        """ 
         self.Context = kwargs.get("Context", Context) 
 
         BenchmarkItem.__init__(self, **kwargs)
         
-        self.contexts = {} 
+        # Contexts associated with this benchmark
+        self.contexts = templates.multi_items.copy()
 
-        # Combine different substates together #
+        # Combine different substates together 
+        self.state["contexts"] = self.contexts
        
     def has_context(self, name): 
         """ 
@@ -57,7 +60,8 @@ class Benchmarker(BenchmarkItem):
         )
 
         # add context to context container
-        self.contexts[name] = context 
+        self.contexts["n_items"] += 1
+        self.contexts["items"][name] = context 
         
         return context
 

@@ -93,8 +93,8 @@ class TestBenchmarker:
         )
 
         assert(result is not None)
-        assert("test-context" in benchmarker.contexts)
-        assert(benchmarker.contexts["test-context"] is not None)
+        assert("test-context" in benchmarker.contexts["items"])
+        assert(benchmarker.contexts["items"]["test-context"] is not None)
 
         benchmarker.Context.assert_called_with(
             name="test-context",
