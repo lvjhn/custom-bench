@@ -3,6 +3,7 @@ import time
 
 from .unit import Unit
 from .benchmark_item import BenchmarkItem
+import custom_bench.templates as templates
 
 class Context(BenchmarkItem): 
     """ 
@@ -23,35 +24,20 @@ class Context(BenchmarkItem):
             kwargs.get("name", self.default_context_name()) 
         self.description = \
             kwargs.get("description", self.default_context_description())
+        self.with_units = \
+            kwargs.get("with_units", False)
 
         # Summary 
-        self.summary = {
-            "start" : None, 
-            "end" : None,
-            "skipped" : 0, 
-            "duration" : {
-                "with_skipped" : 0,
-                "no_skipped" : 0
-            }
-        }
+        self.summary = templates.general_summary.copy()
 
         # Units 
-        self.units = {
-            "meta" : {
-                "n_units" : 0,
-            },  
-            "summary" : {
-                
-            }
-        }
+        self.units = templates.multi_items.copy()
 
         # Base state 
         self.state = {
             "summary" : self.summary, 
             "units" : self.units
         }
-
-
 
     def default_context_name(self): 
         """ 
@@ -67,3 +53,41 @@ class Context(BenchmarkItem):
             a context.
         """ 
         return f"A simple demo benchmark."
+
+    def has_unit(self, name): 
+        """ 
+            Checks if the current context has a unit with
+            the specified name.
+        """ 
+        return name in self.units
+
+    def unit(self, **kwargs):
+        """ 
+            Accesses currently existing unit or creates a new
+            unit when it does not exist yet.
+        """ 
+        name = kwargs.get("name", None)
+        description = kwargs.get("description", None)
+
+        if not self.has_unit(name):
+            return self.create_unit(name, description)
+        else: 
+            return self.units[name]
+
+    def create_unit(self, name, description):
+        """ 
+            Creates a new unit with the specified name 
+            and description.
+        """ 
+        
+        # create new context
+        unit = self.Unit(
+            name=name, 
+            description=description
+        )
+
+        # add context to context container
+        self.units["n_items"] += 1
+        self.units["items"][name] = unit 
+        
+        return unit

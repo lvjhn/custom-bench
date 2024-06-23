@@ -7,8 +7,15 @@ import time
 
 from custom_bench.benchmarker import Benchmarker
 import custom_bench.context as context
+from custom_bench.benchmark_item import BenchmarkItem
 
 class TestBenchmarker: 
+    
+    #
+    # Test Parent Class 
+    # 
+    def test_parent(self): 
+        assert(issubclass(type(Benchmarker()), BenchmarkItem))
 
     #
     # Test Constructor
@@ -38,6 +45,7 @@ class TestBenchmarker:
             )
         )
 
+   
     #
     # Test .has_context() method. 
     #          
