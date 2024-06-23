@@ -6,6 +6,7 @@ import copy
 import scipy.stats as stats
 import shutil
 import numpy as np
+import math
 
 from statsmodels.stats.diagnostic import normal_ad
 from statsmodels.tsa.stattools import adfuller, kpss
@@ -128,7 +129,6 @@ class Context:
         scope = self.data["units_summary"]
 
         Summarizer.patch(meta, with_outliers, no_outliers, scope)
-
 
     def update_durations(self):
         start = self.data["summary"]["start"]
@@ -408,6 +408,8 @@ class Benchmarker: #
 
         # compute durations
         self.update_durations() 
+        self.compute_contexts_summary()
+
 
     def update_durations(self): 
         with_skipped = self.summary["end"] - self.summary["start"]
@@ -427,8 +429,14 @@ class Benchmarker: #
         duration = skip_end - skip_start 
         self.summary["skipped"] += duration
         self._skip_start = None
+        
 
-      
+    def compute_contexts_summary(self): 
+        meta, with_outliers, no_outliers = \
+            Summarizer.summary(self.contexts.values())
+
+        scope = self.contexts_summary
+        Summarizer.patch(meta, with_outliers, no_outliers, scope)
 
     #################
     # BASIC REPORTS #
@@ -535,23 +543,43 @@ class Summarizer:
         scope["with_outliers"] = with_outliers 
         scope["no_outliers"] = no_outliers 
 
-    def unit_durations(units):
-        return map(lambda x: x.data["duration"]["no_skipped"], units)
+    def handle_duration_item(item, durations):
+        if type(item) is Context: 
+            durations.append(
+                item.data["summary"]["duration"]["with_skipped"]
+            )
+        elif type(item) is Unit:
+            durations.append(
+                item.data["duration"]["with_skipped"]
+            )
+        else:
+            raise Exception("Unknown type.")
 
-    def compute_default(units):
-        n_units = len(units)
-        mean = float(np.average(units))
-        mode_res = stats.mode(units)
+    def durations(items):
+        durations = []
+        for item in items:
+            Summarizer.handle_duration_item(item, durations)
+        return durations
+
+    def compute_default(items):
+        n_items = len(items)
+        mean = float(np.average(items))
+        mode_res = stats.mode(items)
         mode = float(mode_res.mode)
         mode_count = float(mode_res.count)
-        median = float(np.median(units))
-        variance = np.var(units)
-        std_dev  = float(np.std(units))
-        skewness = float(stats.skew(units))
-        kurtosis = float(stats.kurtosis(units)) 
+        median = float(np.median(items))
+        variance = np.var(items)
+        std_dev  = float(np.std(items))
+        skewness = float(stats.skew(items))
+        kurtosis = float(stats.kurtosis(items)) 
+
+        if math.isnan(skewness):
+            skewness = "N/A"
+        if math.isnan(kurtosis):
+            kurtosis = "N/A"
 
         result = {
-            "n_units" : n_units, 
+            "n_items" : n_items, 
             "mean" : mean, 
             "mode" : mode, 
             "mode_count" : mode_count,
@@ -561,32 +589,47 @@ class Summarizer:
             "skewness" : skewness, 
             "kurtosis" : kurtosis,
             "percentiles" : {
-                "1"  : np.percentile(units, 1),
-                "5"  : np.percentile(units, 5),
-                "10" : np.percentile(units, 10),
-                "20" : np.percentile(units, 20),
-                "25" : np.percentile(units, 25),
-                "50" : np.percentile(units, 50),
-                "75" : np.percentile(units, 75),
-                "80" : np.percentile(units, 80),
-                "90" : np.percentile(units, 90),
-                "95" : np.percentile(units, 90),
+                "1"  : np.percentile(items, 1),
+                "5"  : np.percentile(items, 5),
+                "10" : np.percentile(items, 10),
+                "20" : np.percentile(items, 20),
+                "25" : np.percentile(items, 25),
+                "50" : np.percentile(items, 50),
+                "75" : np.percentile(items, 75),
+                "80" : np.percentile(items, 80),
+                "90" : np.percentile(items, 90),
+                "95" : np.percentile(items, 90),
             }, 
             "normality" : {
-                "sw" : stats.shapiro(units).pvalue, 
-                "ks" : stats.kstest(units, stats.norm.cdf).pvalue,
-                "ad" : normal_ad(np.array(units))[1]
+                "sw" : (
+                    "N/A" if n_items < 10
+                    else stats.shapiro(items).pvalue
+                ), 
+                "ks" : (
+                    "N/A" if n_items < 10
+                    else stats.kstest(items, stats.norm.cdf).pvalue
+                ),
+                "ad" : (
+                    "N/A" if n_items < 10
+                    else normal_ad(np.array(items))[1]
+                )
             },
             "stationarity" : {
-                "adf" : adfuller(units)[1], 
-                "kpss" : kpss(units)[1]
+                "adf" : (
+                    "N/A" if n_items < 10 
+                    else adfuller(items)[1]
+                ), 
+                "kpss" : (
+                    "N/A" if n_items < 10 
+                    else kpss(items)[1]
+                )
             }
         }
 
         return result
 
-    def compute_meta(units, with_outliers, outlier_thres):
-        n_units = with_outliers["n_units"]
+    def compute_meta(items, with_outliers, outlier_thres):
+        n_items = with_outliers["n_items"]
         mean = with_outliers["mean"]
         std_dev = with_outliers["std_dev"]
         
@@ -600,14 +643,14 @@ class Summarizer:
 
         filtered = []
 
-        for i in range(len(units)):
-            unit = units[i]
-            if unit < lb: 
+        for i in range(len(items)):
+            item = items[i]
+            if item < lb: 
                 below_lb += 1
-            elif unit > ub:
+            elif item > ub:
                 above_ub += 1
             else:
-                filtered.append(unit)
+                filtered.append(item)
 
         total_outliers = below_lb + above_ub
 
@@ -624,9 +667,9 @@ class Summarizer:
                     "total" : total_outliers
                 }, 
                 "perc_total" : {
-                    "below_lb" : below_lb / n_units, 
-                    "above_ub" : above_ub / n_units, 
-                    "both" : total_outliers / n_units
+                    "below_lb" : below_lb / n_items, 
+                    "above_ub" : above_ub / n_items, 
+                    "both" : total_outliers / n_items
                 }, 
                 "perc_outlier" : {
                     "below_lb" : (
@@ -643,20 +686,19 @@ class Summarizer:
 
         return meta, filtered
 
-    def summary(units, outlier_thres = 2):
-        units = Summarizer.unit_durations(units)
-        units = list(units)
+    def summary(items, outlier_thres = 2):
+        items = Summarizer.durations(items)
+        items = list(items)
         
         # compute for with_outliers 
-        with_outliers = Summarizer.compute_default(units)
+        with_outliers = Summarizer.compute_default(items)
 
         # compute meta 
-        meta, filtered_units = Summarizer.compute_meta(
-            units, with_outliers, outlier_thres
+        meta, filtered_items = Summarizer.compute_meta(
+            items, with_outliers, outlier_thres
         )
 
         # compute no outliers
-        no_outliers = Summarizer.compute_default(filtered_units)
-
+        no_outliers = Summarizer.compute_default(filtered_items)
 
         return meta, with_outliers, no_outliers 
