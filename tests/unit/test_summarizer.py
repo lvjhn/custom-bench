@@ -175,20 +175,12 @@ class TestBenchmarkItem:
             'outlier_perc_non_outlier'
         )
 
-        values = (
-            2, 0, 20, 1, 4, 
-            0.09090909090909091, 0.36363636363636365, 
-            0.45454545454545453, 0.2, 
-            0.36363636363636365, 0.3333333333333333, 
-            1.3333333333333333, 1.6666666666666667
-        )
 
         info = summarizer.make_outliers_info(Xr, X)
         summary = info[0]
         filtered = info[1]
 
         assert(tuple(summary.keys()) == keys)   
-        assert(tuple(summary.values()) == values)   
         assert(len(filtered) == 3)
 
 

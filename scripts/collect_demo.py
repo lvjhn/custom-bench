@@ -15,6 +15,11 @@ context_a.start()
 
 for i in range(100):
     unit_a = context_a.unit(name=f"unit-{i}", description=f"{i} ** 2")
+
+    unit_a.skip_start() 
+    print(f"@ Unit {i + 1}.")
+    unit_a.skip_end()
+
     unit_a.start()
     for j in range(10000):
         j = i ** 32

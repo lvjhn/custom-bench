@@ -253,7 +253,7 @@ class TestBenchmarkItem:
                 return self.state
 
         benchmark_item.state = {
-            "contexts" : {
+            "children" : {
                 "items" : {
                     "context-a" : ChildItem(1), 
                     "context-b" : ChildItem(2), 
@@ -264,14 +264,13 @@ class TestBenchmarkItem:
         }
 
         benchmark_item.has_items  = True 
-        benchmark_item.items_name = "contexts" 
 
         root = benchmark_item.collect()     
 
-        assert(root["contexts"]["items"]["context-a"] == 1)
-        assert(root["contexts"]["items"]["context-b"] == 2)
-        assert(root["contexts"]["items"]["context-c"] == 3)
-        assert(root["contexts"]["items"]["context-d"] == 4)
+        assert(root["children"]["items"]["context-a"] == 1)
+        assert(root["children"]["items"]["context-b"] == 2)
+        assert(root["children"]["items"]["context-c"] == 3)
+        assert(root["children"]["items"]["context-d"] == 4)
 
     #
     # Test .after_end_fn()
