@@ -1,6 +1,7 @@
 import uuid 
 import datetime 
 import time
+import copy
 
 import custom_bench.templates as templates
 
@@ -41,15 +42,13 @@ class BenchmarkItem:
         }
 
         # Summary Info. 
-        self.summary = templates.general_summary.copy()
+        self.summary = copy.deepcopy(templates.general_summary)
 
         # Combined State 
         self.state = {
             "meta"     : self.meta, 
             "summary"  : self.summary
         }
-
-        # Summarizer 
 
         # Other State Variables 
         self.misc = {

@@ -64,6 +64,7 @@ class Summarizer:
 
         start = summary["start"]
         end = summary["end"]
+
         duration = end - start
         skipped = summary["skipped"]
         duration_trimmed = duration - skipped

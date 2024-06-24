@@ -57,7 +57,6 @@ general_summary = {
 }
 
 multi_items = {
-    "general_summary" : general_summary.copy(),
     "n_items" : 0,
     "items_summary" : {
         "outliers_info" : outliers_info.copy(), 

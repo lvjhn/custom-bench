@@ -2,29 +2,22 @@
     "meta": {
         "name": "Benchmarker-Demo",
         "description": "A simple customized benchmarking demo.",
-        "ran_at": "2024-06-24 16:45:59"
+        "ran_at": "2024-06-24 17:08:17"
     },
     "summary": {
-        "start": 1.392128454,
-        "end": 1.392285399,
+        "start": 1.362410229,
+        "end": 1.810170215,
         "skipped": 0,
-        "duration_ws": 0.0001569449999998529,
-        "duration_ns": 0.0001569449999998529
+        "duration_ws": 0.4477599860000001,
+        "duration_ns": 0.4477599860000001
     },
     "children": {
-        "general_summary": {
-            "start": null,
-            "end": null,
-            "skipped": 0,
-            "duration_ws": 0,
-            "duration_ns": 0
-        },
         "n_items": 2,
         "items_summary": {
             "outliers_info": {
                 "thres": 2,
-                "lb": 2.8728000000199927e-05,
-                "ub": 3.407999999982536e-05,
+                "lb": -0.12523580449999994,
+                "ub": 0.5323031535,
                 "qty_below_lb": 0,
                 "qty_above_ub": 0,
                 "b_lb_perc_total": 0.0,
@@ -39,26 +32,26 @@
                 "outlier_perc_non_outlier": 0.0
             },
             "with_outliers": {
-                "mean": 3.1404000000012644e-05,
-                "mode_val": 3.0066000000106285e-05,
+                "mean": 0.20353367450000004,
+                "mode_val": 0.03914893500000005,
                 "mode_count": 1,
-                "median": 3.1404000000012644e-05,
-                "variance": 1.7902439997494155e-12,
-                "std_dev": 1.3379999999063585e-06,
-                "coef_var": 0.042606037444459934,
+                "median": 0.20353367450000004,
+                "variance": 0.027022342580482858,
+                "std_dev": 0.1643847395,
+                "coef_var": 0.8076537698433777,
                 "skewness": 0.0,
                 "kurtosis": -2.0,
-                "percentile_1": 3.0092760000104414e-05,
-                "percentile_5": 3.0092760000104414e-05,
-                "percentile_10": 3.0092760000104414e-05,
-                "percentile_20": 3.0092760000104414e-05,
-                "percentile_25": 3.0092760000104414e-05,
-                "percentile_50": 3.0092760000104414e-05,
-                "percentile_75": 3.0092760000104414e-05,
-                "percentile_80": 3.0092760000104414e-05,
-                "percentile_90": 3.0092760000104414e-05,
-                "percentile_95": 3.0092760000104414e-05,
-                "percentile_99": 3.0092760000104414e-05,
+                "percentile_1": 0.04243662979000005,
+                "percentile_5": 0.04243662979000005,
+                "percentile_10": 0.04243662979000005,
+                "percentile_20": 0.04243662979000005,
+                "percentile_25": 0.04243662979000005,
+                "percentile_50": 0.04243662979000005,
+                "percentile_75": 0.04243662979000005,
+                "percentile_80": 0.04243662979000005,
+                "percentile_90": 0.04243662979000005,
+                "percentile_95": 0.04243662979000005,
+                "percentile_99": 0.04243662979000005,
                 "normality_sw": "N/A",
                 "normality_ks": "N/A",
                 "normality_ad": "N/A",
@@ -66,26 +59,26 @@
                 "stationarity_kpss": "N/A"
             },
             "no_outliers": {
-                "mean": 3.1404000000012644e-05,
-                "mode_val": 3.0066000000106285e-05,
+                "mean": 0.20353367450000004,
+                "mode_val": 0.03914893500000005,
                 "mode_count": 1,
-                "median": 3.1404000000012644e-05,
-                "variance": 1.7902439997494155e-12,
-                "std_dev": 1.3379999999063585e-06,
-                "coef_var": 0.042606037444459934,
+                "median": 0.20353367450000004,
+                "variance": 0.027022342580482858,
+                "std_dev": 0.1643847395,
+                "coef_var": 0.8076537698433777,
                 "skewness": 0.0,
                 "kurtosis": -2.0,
-                "percentile_1": 3.0092760000104414e-05,
-                "percentile_5": 3.0092760000104414e-05,
-                "percentile_10": 3.0092760000104414e-05,
-                "percentile_20": 3.0092760000104414e-05,
-                "percentile_25": 3.0092760000104414e-05,
-                "percentile_50": 3.0092760000104414e-05,
-                "percentile_75": 3.0092760000104414e-05,
-                "percentile_80": 3.0092760000104414e-05,
-                "percentile_90": 3.0092760000104414e-05,
-                "percentile_95": 3.0092760000104414e-05,
-                "percentile_99": 3.0092760000104414e-05,
+                "percentile_1": 0.04243662979000005,
+                "percentile_5": 0.04243662979000005,
+                "percentile_10": 0.04243662979000005,
+                "percentile_20": 0.04243662979000005,
+                "percentile_25": 0.04243662979000005,
+                "percentile_50": 0.04243662979000005,
+                "percentile_75": 0.04243662979000005,
+                "percentile_80": 0.04243662979000005,
+                "percentile_90": 0.04243662979000005,
+                "percentile_95": 0.04243662979000005,
+                "percentile_99": 0.04243662979000005,
                 "normality_sw": "N/A",
                 "normality_ks": "N/A",
                 "normality_ad": "N/A",
@@ -98,28 +91,2984 @@
                 "meta": {
                     "name": "raise-by-2",
                     "description": null,
-                    "ran_at": "2024-06-24 16:45:59"
+                    "ran_at": "2024-06-24 17:08:17"
                 },
                 "summary": {
-                    "start": 1.392179059,
-                    "end": 1.392211801,
+                    "start": 1.362556735,
+                    "end": 1.730475149,
                     "skipped": 0,
-                    "duration_ws": 3.2741999999919e-05,
-                    "duration_ns": 3.2741999999919e-05
+                    "duration_ws": 0.367918414,
+                    "duration_ns": 0.367918414
+                },
+                "children": {
+                    "n_items": 100,
+                    "items_summary": {
+                        "outliers_info": {
+                            "thres": 2,
+                            "lb": 0.0029499957135729234,
+                            "ub": 0.004185339986427091,
+                            "qty_below_lb": 4,
+                            "qty_above_ub": 2,
+                            "b_lb_perc_total": 0.04,
+                            "a_ub_perc_total": 0.02,
+                            "both_perc_total": 0.06,
+                            "b_lb_perc_outlier": 0.6666666666666666,
+                            "a_ub_perc_outlier": 0.02,
+                            "b_lb_perc_non_outlier": 0.0425531914893617,
+                            "a_ub_perc_non_outlier": [
+                                0.02127659574468085
+                            ],
+                            "outlier_perc_non_outlier": 0.06382978723404255
+                        },
+                        "with_outliers": {
+                            "mean": 0.003567667850000007,
+                            "mode_val": 0.002765287000000116,
+                            "mode_count": 1,
+                            "median": 0.003561434500000016,
+                            "variance": 9.537971702959946e-08,
+                            "std_dev": 0.00030883606821354185,
+                            "coef_var": 0.08656525248378748,
+                            "skewness": 1.028591163946668,
+                            "kurtosis": 5.984242305991367,
+                            "percentile_1": 0.002791958589999899,
+                            "percentile_5": 0.002791958589999899,
+                            "percentile_10": 0.002791958589999899,
+                            "percentile_20": 0.002791958589999899,
+                            "percentile_25": 0.002791958589999899,
+                            "percentile_50": 0.002791958589999899,
+                            "percentile_75": 0.002791958589999899,
+                            "percentile_80": 0.002791958589999899,
+                            "percentile_90": 0.002791958589999899,
+                            "percentile_95": 0.002791958589999899,
+                            "percentile_99": 0.002791958589999899,
+                            "normality_sw": 3.450077382858262e-08,
+                            "normality_ks": 9.42724378202851e-24,
+                            "normality_ad": 1.0245971785386172e-08,
+                            "stationarity_adf": 7.045043101036423e-08,
+                            "stationarity_kpss": 0.09770253238063487
+                        },
+                        "no_outliers": {
+                            "mean": 0.0035714786489361794,
+                            "mode_val": 0.003002753999999941,
+                            "mode_count": 1,
+                            "median": 0.0035705819999999333,
+                            "variance": 3.9210335896030596e-08,
+                            "std_dev": 0.0001980159990910598,
+                            "coef_var": 0.05544370233041767,
+                            "skewness": -0.036894155360264254,
+                            "kurtosis": 0.3782212080127456,
+                            "percentile_1": 0.003104380680000036,
+                            "percentile_5": 0.003104380680000036,
+                            "percentile_10": 0.003104380680000036,
+                            "percentile_20": 0.003104380680000036,
+                            "percentile_25": 0.003104380680000036,
+                            "percentile_50": 0.003104380680000036,
+                            "percentile_75": 0.003104380680000036,
+                            "percentile_80": 0.003104380680000036,
+                            "percentile_90": 0.003104380680000036,
+                            "percentile_95": 0.003104380680000036,
+                            "percentile_99": 0.003104380680000036,
+                            "normality_sw": 0.024280513993258195,
+                            "normality_ks": 2.2863738904769128e-22,
+                            "normality_ad": 0.005568144155836282,
+                            "stationarity_adf": 0.011925854400025034,
+                            "stationarity_kpss": 0.1
+                        }
+                    },
+                    "items": {
+                        "unit-0": {
+                            "meta": {
+                                "name": "unit-0",
+                                "description": "0 ** 2",
+                                "ran_at": "2024-06-24 17:08:17"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-1": {
+                            "meta": {
+                                "name": "unit-1",
+                                "description": "1 ** 2",
+                                "ran_at": "2024-06-24 17:08:17"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-2": {
+                            "meta": {
+                                "name": "unit-2",
+                                "description": "2 ** 2",
+                                "ran_at": "2024-06-24 17:08:17"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-3": {
+                            "meta": {
+                                "name": "unit-3",
+                                "description": "3 ** 2",
+                                "ran_at": "2024-06-24 17:08:17"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-4": {
+                            "meta": {
+                                "name": "unit-4",
+                                "description": "4 ** 2",
+                                "ran_at": "2024-06-24 17:08:17"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-5": {
+                            "meta": {
+                                "name": "unit-5",
+                                "description": "5 ** 2",
+                                "ran_at": "2024-06-24 17:08:17"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-6": {
+                            "meta": {
+                                "name": "unit-6",
+                                "description": "6 ** 2",
+                                "ran_at": "2024-06-24 17:08:17"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-7": {
+                            "meta": {
+                                "name": "unit-7",
+                                "description": "7 ** 2",
+                                "ran_at": "2024-06-24 17:08:17"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-8": {
+                            "meta": {
+                                "name": "unit-8",
+                                "description": "8 ** 2",
+                                "ran_at": "2024-06-24 17:08:17"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-9": {
+                            "meta": {
+                                "name": "unit-9",
+                                "description": "9 ** 2",
+                                "ran_at": "2024-06-24 17:08:17"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-10": {
+                            "meta": {
+                                "name": "unit-10",
+                                "description": "10 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-11": {
+                            "meta": {
+                                "name": "unit-11",
+                                "description": "11 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-12": {
+                            "meta": {
+                                "name": "unit-12",
+                                "description": "12 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-13": {
+                            "meta": {
+                                "name": "unit-13",
+                                "description": "13 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-14": {
+                            "meta": {
+                                "name": "unit-14",
+                                "description": "14 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-15": {
+                            "meta": {
+                                "name": "unit-15",
+                                "description": "15 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-16": {
+                            "meta": {
+                                "name": "unit-16",
+                                "description": "16 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-17": {
+                            "meta": {
+                                "name": "unit-17",
+                                "description": "17 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-18": {
+                            "meta": {
+                                "name": "unit-18",
+                                "description": "18 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-19": {
+                            "meta": {
+                                "name": "unit-19",
+                                "description": "19 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-20": {
+                            "meta": {
+                                "name": "unit-20",
+                                "description": "20 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-21": {
+                            "meta": {
+                                "name": "unit-21",
+                                "description": "21 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-22": {
+                            "meta": {
+                                "name": "unit-22",
+                                "description": "22 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-23": {
+                            "meta": {
+                                "name": "unit-23",
+                                "description": "23 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-24": {
+                            "meta": {
+                                "name": "unit-24",
+                                "description": "24 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-25": {
+                            "meta": {
+                                "name": "unit-25",
+                                "description": "25 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-26": {
+                            "meta": {
+                                "name": "unit-26",
+                                "description": "26 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-27": {
+                            "meta": {
+                                "name": "unit-27",
+                                "description": "27 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-28": {
+                            "meta": {
+                                "name": "unit-28",
+                                "description": "28 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-29": {
+                            "meta": {
+                                "name": "unit-29",
+                                "description": "29 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-30": {
+                            "meta": {
+                                "name": "unit-30",
+                                "description": "30 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-31": {
+                            "meta": {
+                                "name": "unit-31",
+                                "description": "31 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-32": {
+                            "meta": {
+                                "name": "unit-32",
+                                "description": "32 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-33": {
+                            "meta": {
+                                "name": "unit-33",
+                                "description": "33 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-34": {
+                            "meta": {
+                                "name": "unit-34",
+                                "description": "34 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-35": {
+                            "meta": {
+                                "name": "unit-35",
+                                "description": "35 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-36": {
+                            "meta": {
+                                "name": "unit-36",
+                                "description": "36 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-37": {
+                            "meta": {
+                                "name": "unit-37",
+                                "description": "37 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-38": {
+                            "meta": {
+                                "name": "unit-38",
+                                "description": "38 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-39": {
+                            "meta": {
+                                "name": "unit-39",
+                                "description": "39 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-40": {
+                            "meta": {
+                                "name": "unit-40",
+                                "description": "40 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-41": {
+                            "meta": {
+                                "name": "unit-41",
+                                "description": "41 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-42": {
+                            "meta": {
+                                "name": "unit-42",
+                                "description": "42 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-43": {
+                            "meta": {
+                                "name": "unit-43",
+                                "description": "43 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-44": {
+                            "meta": {
+                                "name": "unit-44",
+                                "description": "44 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-45": {
+                            "meta": {
+                                "name": "unit-45",
+                                "description": "45 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-46": {
+                            "meta": {
+                                "name": "unit-46",
+                                "description": "46 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-47": {
+                            "meta": {
+                                "name": "unit-47",
+                                "description": "47 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-48": {
+                            "meta": {
+                                "name": "unit-48",
+                                "description": "48 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-49": {
+                            "meta": {
+                                "name": "unit-49",
+                                "description": "49 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-50": {
+                            "meta": {
+                                "name": "unit-50",
+                                "description": "50 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-51": {
+                            "meta": {
+                                "name": "unit-51",
+                                "description": "51 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-52": {
+                            "meta": {
+                                "name": "unit-52",
+                                "description": "52 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-53": {
+                            "meta": {
+                                "name": "unit-53",
+                                "description": "53 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-54": {
+                            "meta": {
+                                "name": "unit-54",
+                                "description": "54 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-55": {
+                            "meta": {
+                                "name": "unit-55",
+                                "description": "55 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-56": {
+                            "meta": {
+                                "name": "unit-56",
+                                "description": "56 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-57": {
+                            "meta": {
+                                "name": "unit-57",
+                                "description": "57 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-58": {
+                            "meta": {
+                                "name": "unit-58",
+                                "description": "58 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-59": {
+                            "meta": {
+                                "name": "unit-59",
+                                "description": "59 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-60": {
+                            "meta": {
+                                "name": "unit-60",
+                                "description": "60 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-61": {
+                            "meta": {
+                                "name": "unit-61",
+                                "description": "61 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-62": {
+                            "meta": {
+                                "name": "unit-62",
+                                "description": "62 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-63": {
+                            "meta": {
+                                "name": "unit-63",
+                                "description": "63 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-64": {
+                            "meta": {
+                                "name": "unit-64",
+                                "description": "64 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-65": {
+                            "meta": {
+                                "name": "unit-65",
+                                "description": "65 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-66": {
+                            "meta": {
+                                "name": "unit-66",
+                                "description": "66 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-67": {
+                            "meta": {
+                                "name": "unit-67",
+                                "description": "67 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-68": {
+                            "meta": {
+                                "name": "unit-68",
+                                "description": "68 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-69": {
+                            "meta": {
+                                "name": "unit-69",
+                                "description": "69 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-70": {
+                            "meta": {
+                                "name": "unit-70",
+                                "description": "70 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-71": {
+                            "meta": {
+                                "name": "unit-71",
+                                "description": "71 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-72": {
+                            "meta": {
+                                "name": "unit-72",
+                                "description": "72 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-73": {
+                            "meta": {
+                                "name": "unit-73",
+                                "description": "73 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-74": {
+                            "meta": {
+                                "name": "unit-74",
+                                "description": "74 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-75": {
+                            "meta": {
+                                "name": "unit-75",
+                                "description": "75 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-76": {
+                            "meta": {
+                                "name": "unit-76",
+                                "description": "76 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-77": {
+                            "meta": {
+                                "name": "unit-77",
+                                "description": "77 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-78": {
+                            "meta": {
+                                "name": "unit-78",
+                                "description": "78 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-79": {
+                            "meta": {
+                                "name": "unit-79",
+                                "description": "79 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-80": {
+                            "meta": {
+                                "name": "unit-80",
+                                "description": "80 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-81": {
+                            "meta": {
+                                "name": "unit-81",
+                                "description": "81 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-82": {
+                            "meta": {
+                                "name": "unit-82",
+                                "description": "82 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-83": {
+                            "meta": {
+                                "name": "unit-83",
+                                "description": "83 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-84": {
+                            "meta": {
+                                "name": "unit-84",
+                                "description": "84 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-85": {
+                            "meta": {
+                                "name": "unit-85",
+                                "description": "85 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-86": {
+                            "meta": {
+                                "name": "unit-86",
+                                "description": "86 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-87": {
+                            "meta": {
+                                "name": "unit-87",
+                                "description": "87 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-88": {
+                            "meta": {
+                                "name": "unit-88",
+                                "description": "88 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-89": {
+                            "meta": {
+                                "name": "unit-89",
+                                "description": "89 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-90": {
+                            "meta": {
+                                "name": "unit-90",
+                                "description": "90 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-91": {
+                            "meta": {
+                                "name": "unit-91",
+                                "description": "91 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-92": {
+                            "meta": {
+                                "name": "unit-92",
+                                "description": "92 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-93": {
+                            "meta": {
+                                "name": "unit-93",
+                                "description": "93 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-94": {
+                            "meta": {
+                                "name": "unit-94",
+                                "description": "94 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-95": {
+                            "meta": {
+                                "name": "unit-95",
+                                "description": "95 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-96": {
+                            "meta": {
+                                "name": "unit-96",
+                                "description": "96 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-97": {
+                            "meta": {
+                                "name": "unit-97",
+                                "description": "97 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-98": {
+                            "meta": {
+                                "name": "unit-98",
+                                "description": "98 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-99": {
+                            "meta": {
+                                "name": "unit-99",
+                                "description": "99 ** 2",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        }
+                    }
                 }
             },
             "raise-by-3": {
                 "meta": {
                     "name": "raise-by-3",
                     "description": null,
-                    "ran_at": "2024-06-24 16:45:59"
+                    "ran_at": "2024-06-24 17:08:18"
                 },
                 "summary": {
-                    "start": 1.392252688,
-                    "end": 1.392282754,
+                    "start": 1.751415108,
+                    "end": 1.790564043,
                     "skipped": 0,
-                    "duration_ws": 3.0066000000106285e-05,
-                    "duration_ns": 3.0066000000106285e-05
+                    "duration_ws": 0.03914893500000005,
+                    "duration_ns": 0.03914893500000005
+                },
+                "children": {
+                    "n_items": 100,
+                    "items_summary": {
+                        "outliers_info": {
+                            "thres": 2,
+                            "lb": 1.5852220898140597e-06,
+                            "ub": 3.4213379101441894e-06,
+                            "qty_below_lb": 0,
+                            "qty_above_ub": 1,
+                            "b_lb_perc_total": 0.0,
+                            "a_ub_perc_total": 0.01,
+                            "both_perc_total": 0.01,
+                            "b_lb_perc_outlier": 0.0,
+                            "a_ub_perc_outlier": 0.01,
+                            "b_lb_perc_non_outlier": 0.0,
+                            "a_ub_perc_non_outlier": [
+                                0.010101010101010102
+                            ],
+                            "outlier_perc_non_outlier": 0.010101010101010102
+                        },
+                        "with_outliers": {
+                            "mean": 2.5032799999791246e-06,
+                            "mode_val": 2.4149999999778515e-06,
+                            "mode_count": 5,
+                            "median": 2.424499999986729e-06,
+                            "variance": 2.107075816041615e-13,
+                            "std_dev": 4.5902895508253237e-07,
+                            "coef_var": 0.1833709992834842,
+                            "skewness": 8.429132827734355,
+                            "kurtosis": 76.22712084096305,
+                            "percentile_1": 2.283500000019867e-06,
+                            "percentile_5": 2.283500000019867e-06,
+                            "percentile_10": 2.283500000019867e-06,
+                            "percentile_20": 2.283500000019867e-06,
+                            "percentile_25": 2.283500000019867e-06,
+                            "percentile_50": 2.283500000019867e-06,
+                            "percentile_75": 2.283500000019867e-06,
+                            "percentile_80": 2.283500000019867e-06,
+                            "percentile_90": 2.283500000019867e-06,
+                            "percentile_95": 2.283500000019867e-06,
+                            "percentile_99": 2.283500000019867e-06,
+                            "normality_sw": 6.838994148342151e-20,
+                            "normality_ks": 1.2128966496422097e-23,
+                            "normality_ad": 0.0,
+                            "stationarity_adf": 5.28206471651099e-15,
+                            "stationarity_kpss": 0.021619708869919575
+                        },
+                        "no_outliers": {
+                            "mean": 2.45954545452397e-06,
+                            "mode_val": 2.4149999999778515e-06,
+                            "mode_count": 5,
+                            "median": 2.424000000056381e-06,
+                            "variance": 2.1564894397409577e-14,
+                            "std_dev": 1.4684990431528913e-07,
+                            "coef_var": 0.059706115227584206,
+                            "skewness": 2.069186229693657,
+                            "kurtosis": 5.869833269238066,
+                            "percentile_1": 2.283000000020685e-06,
+                            "percentile_5": 2.283000000020685e-06,
+                            "percentile_10": 2.283000000020685e-06,
+                            "percentile_20": 2.283000000020685e-06,
+                            "percentile_25": 2.283000000020685e-06,
+                            "percentile_50": 2.283000000020685e-06,
+                            "percentile_75": 2.283000000020685e-06,
+                            "percentile_80": 2.283000000020685e-06,
+                            "percentile_90": 2.283000000020685e-06,
+                            "percentile_95": 2.283000000020685e-06,
+                            "percentile_99": 2.283000000020685e-06,
+                            "normality_sw": 1.375706450274275e-09,
+                            "normality_ks": 2.0653804495976018e-23,
+                            "normality_ad": 5.596153361509885e-11,
+                            "stationarity_adf": 1.2074141574423146e-12,
+                            "stationarity_kpss": 0.01
+                        }
+                    },
+                    "items": {
+                        "unit-0": {
+                            "meta": {
+                                "name": "unit-0",
+                                "description": "0 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-1": {
+                            "meta": {
+                                "name": "unit-1",
+                                "description": "1 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-2": {
+                            "meta": {
+                                "name": "unit-2",
+                                "description": "2 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-3": {
+                            "meta": {
+                                "name": "unit-3",
+                                "description": "3 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-4": {
+                            "meta": {
+                                "name": "unit-4",
+                                "description": "4 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-5": {
+                            "meta": {
+                                "name": "unit-5",
+                                "description": "5 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-6": {
+                            "meta": {
+                                "name": "unit-6",
+                                "description": "6 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-7": {
+                            "meta": {
+                                "name": "unit-7",
+                                "description": "7 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-8": {
+                            "meta": {
+                                "name": "unit-8",
+                                "description": "8 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-9": {
+                            "meta": {
+                                "name": "unit-9",
+                                "description": "9 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-10": {
+                            "meta": {
+                                "name": "unit-10",
+                                "description": "10 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-11": {
+                            "meta": {
+                                "name": "unit-11",
+                                "description": "11 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-12": {
+                            "meta": {
+                                "name": "unit-12",
+                                "description": "12 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-13": {
+                            "meta": {
+                                "name": "unit-13",
+                                "description": "13 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-14": {
+                            "meta": {
+                                "name": "unit-14",
+                                "description": "14 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-15": {
+                            "meta": {
+                                "name": "unit-15",
+                                "description": "15 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-16": {
+                            "meta": {
+                                "name": "unit-16",
+                                "description": "16 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-17": {
+                            "meta": {
+                                "name": "unit-17",
+                                "description": "17 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-18": {
+                            "meta": {
+                                "name": "unit-18",
+                                "description": "18 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-19": {
+                            "meta": {
+                                "name": "unit-19",
+                                "description": "19 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-20": {
+                            "meta": {
+                                "name": "unit-20",
+                                "description": "20 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-21": {
+                            "meta": {
+                                "name": "unit-21",
+                                "description": "21 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-22": {
+                            "meta": {
+                                "name": "unit-22",
+                                "description": "22 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-23": {
+                            "meta": {
+                                "name": "unit-23",
+                                "description": "23 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-24": {
+                            "meta": {
+                                "name": "unit-24",
+                                "description": "24 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-25": {
+                            "meta": {
+                                "name": "unit-25",
+                                "description": "25 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-26": {
+                            "meta": {
+                                "name": "unit-26",
+                                "description": "26 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-27": {
+                            "meta": {
+                                "name": "unit-27",
+                                "description": "27 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-28": {
+                            "meta": {
+                                "name": "unit-28",
+                                "description": "28 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-29": {
+                            "meta": {
+                                "name": "unit-29",
+                                "description": "29 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-30": {
+                            "meta": {
+                                "name": "unit-30",
+                                "description": "30 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-31": {
+                            "meta": {
+                                "name": "unit-31",
+                                "description": "31 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-32": {
+                            "meta": {
+                                "name": "unit-32",
+                                "description": "32 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-33": {
+                            "meta": {
+                                "name": "unit-33",
+                                "description": "33 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-34": {
+                            "meta": {
+                                "name": "unit-34",
+                                "description": "34 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-35": {
+                            "meta": {
+                                "name": "unit-35",
+                                "description": "35 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-36": {
+                            "meta": {
+                                "name": "unit-36",
+                                "description": "36 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-37": {
+                            "meta": {
+                                "name": "unit-37",
+                                "description": "37 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-38": {
+                            "meta": {
+                                "name": "unit-38",
+                                "description": "38 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-39": {
+                            "meta": {
+                                "name": "unit-39",
+                                "description": "39 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-40": {
+                            "meta": {
+                                "name": "unit-40",
+                                "description": "40 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-41": {
+                            "meta": {
+                                "name": "unit-41",
+                                "description": "41 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-42": {
+                            "meta": {
+                                "name": "unit-42",
+                                "description": "42 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-43": {
+                            "meta": {
+                                "name": "unit-43",
+                                "description": "43 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-44": {
+                            "meta": {
+                                "name": "unit-44",
+                                "description": "44 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-45": {
+                            "meta": {
+                                "name": "unit-45",
+                                "description": "45 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-46": {
+                            "meta": {
+                                "name": "unit-46",
+                                "description": "46 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-47": {
+                            "meta": {
+                                "name": "unit-47",
+                                "description": "47 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-48": {
+                            "meta": {
+                                "name": "unit-48",
+                                "description": "48 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-49": {
+                            "meta": {
+                                "name": "unit-49",
+                                "description": "49 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-50": {
+                            "meta": {
+                                "name": "unit-50",
+                                "description": "50 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-51": {
+                            "meta": {
+                                "name": "unit-51",
+                                "description": "51 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-52": {
+                            "meta": {
+                                "name": "unit-52",
+                                "description": "52 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-53": {
+                            "meta": {
+                                "name": "unit-53",
+                                "description": "53 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-54": {
+                            "meta": {
+                                "name": "unit-54",
+                                "description": "54 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-55": {
+                            "meta": {
+                                "name": "unit-55",
+                                "description": "55 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-56": {
+                            "meta": {
+                                "name": "unit-56",
+                                "description": "56 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-57": {
+                            "meta": {
+                                "name": "unit-57",
+                                "description": "57 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-58": {
+                            "meta": {
+                                "name": "unit-58",
+                                "description": "58 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-59": {
+                            "meta": {
+                                "name": "unit-59",
+                                "description": "59 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-60": {
+                            "meta": {
+                                "name": "unit-60",
+                                "description": "60 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-61": {
+                            "meta": {
+                                "name": "unit-61",
+                                "description": "61 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-62": {
+                            "meta": {
+                                "name": "unit-62",
+                                "description": "62 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-63": {
+                            "meta": {
+                                "name": "unit-63",
+                                "description": "63 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-64": {
+                            "meta": {
+                                "name": "unit-64",
+                                "description": "64 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-65": {
+                            "meta": {
+                                "name": "unit-65",
+                                "description": "65 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-66": {
+                            "meta": {
+                                "name": "unit-66",
+                                "description": "66 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-67": {
+                            "meta": {
+                                "name": "unit-67",
+                                "description": "67 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-68": {
+                            "meta": {
+                                "name": "unit-68",
+                                "description": "68 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-69": {
+                            "meta": {
+                                "name": "unit-69",
+                                "description": "69 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-70": {
+                            "meta": {
+                                "name": "unit-70",
+                                "description": "70 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-71": {
+                            "meta": {
+                                "name": "unit-71",
+                                "description": "71 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-72": {
+                            "meta": {
+                                "name": "unit-72",
+                                "description": "72 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-73": {
+                            "meta": {
+                                "name": "unit-73",
+                                "description": "73 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-74": {
+                            "meta": {
+                                "name": "unit-74",
+                                "description": "74 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-75": {
+                            "meta": {
+                                "name": "unit-75",
+                                "description": "75 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-76": {
+                            "meta": {
+                                "name": "unit-76",
+                                "description": "76 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-77": {
+                            "meta": {
+                                "name": "unit-77",
+                                "description": "77 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-78": {
+                            "meta": {
+                                "name": "unit-78",
+                                "description": "78 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-79": {
+                            "meta": {
+                                "name": "unit-79",
+                                "description": "79 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-80": {
+                            "meta": {
+                                "name": "unit-80",
+                                "description": "80 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-81": {
+                            "meta": {
+                                "name": "unit-81",
+                                "description": "81 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-82": {
+                            "meta": {
+                                "name": "unit-82",
+                                "description": "82 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-83": {
+                            "meta": {
+                                "name": "unit-83",
+                                "description": "83 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-84": {
+                            "meta": {
+                                "name": "unit-84",
+                                "description": "84 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-85": {
+                            "meta": {
+                                "name": "unit-85",
+                                "description": "85 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-86": {
+                            "meta": {
+                                "name": "unit-86",
+                                "description": "86 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-87": {
+                            "meta": {
+                                "name": "unit-87",
+                                "description": "87 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-88": {
+                            "meta": {
+                                "name": "unit-88",
+                                "description": "88 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-89": {
+                            "meta": {
+                                "name": "unit-89",
+                                "description": "89 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-90": {
+                            "meta": {
+                                "name": "unit-90",
+                                "description": "90 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-91": {
+                            "meta": {
+                                "name": "unit-91",
+                                "description": "91 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-92": {
+                            "meta": {
+                                "name": "unit-92",
+                                "description": "92 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-93": {
+                            "meta": {
+                                "name": "unit-93",
+                                "description": "93 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-94": {
+                            "meta": {
+                                "name": "unit-94",
+                                "description": "94 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-95": {
+                            "meta": {
+                                "name": "unit-95",
+                                "description": "95 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-96": {
+                            "meta": {
+                                "name": "unit-96",
+                                "description": "96 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-97": {
+                            "meta": {
+                                "name": "unit-97",
+                                "description": "97 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-98": {
+                            "meta": {
+                                "name": "unit-98",
+                                "description": "98 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        },
+                        "unit-99": {
+                            "meta": {
+                                "name": "unit-99",
+                                "description": "99 ** 3",
+                                "ran_at": "2024-06-24 17:08:18"
+                            },
+                            "summary": {
+                                "start": null,
+                                "end": null,
+                                "skipped": 0,
+                                "duration_ws": 0,
+                                "duration_ns": 0
+                            }
+                        }
+                    }
                 }
             }
         }

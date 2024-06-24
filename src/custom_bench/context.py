@@ -1,9 +1,10 @@
 
 import time
-
 from .unit import Unit
 from .benchmark_item import BenchmarkItem
 import custom_bench.templates as templates
+
+import copy
 
 class Context(BenchmarkItem): 
     """ 
@@ -21,7 +22,9 @@ class Context(BenchmarkItem):
         BenchmarkItem.__init__(self, **kwargs)
 
         # Items configurations 
-        self.has_items  = kwargs.get("has_items", False) 
+        self.has_items  = kwargs.get(
+            "has_items", kwargs.get("with_units", False)
+        ) 
         self.items_name = "units"
 
         # Parameters 
@@ -37,8 +40,8 @@ class Context(BenchmarkItem):
             self.benchmark
 
         # Units 
-        self.units = templates.multi_items.copy()
-        
+        self.units = copy.deepcopy(templates.multi_items) 
+
         # Register in state 
         if self.has_items:
             self.state["children"] = self.units

@@ -1,6 +1,7 @@
 import uuid
 import datetime
 import time
+import copy
 
 from .context import Context
 from .benchmark_item import BenchmarkItem
@@ -25,7 +26,7 @@ class Benchmarker(BenchmarkItem):
         self.items_name = "contexts" 
         
         # Contexts associated with this benchmark
-        self.contexts = templates.multi_items.copy()
+        self.contexts = copy.deepcopy(templates.multi_items)
 
         # Register in state 
         if self.has_items:

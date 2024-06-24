@@ -3,6 +3,8 @@ import time
 import custom_bench.templates as templates
 from .benchmark_item import BenchmarkItem
 
+import copy
+
 class Unit(BenchmarkItem): 
     """ 
         Unit class which can defines a single unit of 
@@ -13,6 +15,7 @@ class Unit(BenchmarkItem):
         """ 
             Creates a new Unit object.
         """  
+        BenchmarkItem.__init__(self, **kwargs)
 
         # Parameters 
         self.name = \
@@ -25,7 +28,7 @@ class Unit(BenchmarkItem):
             self.context
 
         # Summary 
-        self.summary = templates.general_summary.copy()
+        self.summary = copy.deepcopy(templates.general_summary)
 
     def default_unit_name(self): 
         """ 
