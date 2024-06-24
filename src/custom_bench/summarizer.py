@@ -145,7 +145,7 @@ class Summarizer:
         outlier_perc_non_outlier = "N/A" 
         if n_within_b > 0: 
             b_lb_perc_non_outlier = n_below_lb / n_within_b
-            a_ub_perc_non_outlier = n_above_ub / n_within_b,
+            a_ub_perc_non_outlier = n_above_ub / n_within_b
             outlier_perc_non_outlier = n_outside_b / n_within_b
 
 
@@ -153,8 +153,10 @@ class Summarizer:
             "thres"                         : thres, 
             "lb"                            : lb,
             "ub"                            : ub, 
+
             "qty_below_lb"                  : n_below_lb, 
             "qty_above_ub"                  : n_above_ub,
+            "n_outliers"                    : n_outside_b,
     
             "b_lb_perc_total"               : b_lb_perc_total, 
             "a_ub_perc_total"               : a_ub_perc_total, 

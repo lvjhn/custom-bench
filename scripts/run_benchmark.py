@@ -1,9 +1,19 @@
+import json
+import pprint as pp
+
 from custom_bench.benchmarker import Benchmarker 
 
-benchmark = Benchmarker(
-    name="demo-benchmark",
-    description="A simple demo benchmark."
+benchmarker = Benchmarker(
+    name="Name-Of-The-Benchmark",
+    description="Description-Of-The-Benchmark"
 )
 
-print(benchmark.info())
+benchmarker.start() 
 
+# code to benchmark
+
+benchmarker.end() 
+
+# get the results 
+
+pp.pprint(benchmarker.summary)

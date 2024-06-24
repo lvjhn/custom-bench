@@ -1,18 +1,18 @@
 [project]
 name = "custom-bench"
-version = "0.0.1"
+version = "0.5.0"
 description = "This is a simple benchmarking library for Python3 designed to be easy to understand and use. "
 readme = "README.md"
 requires-python = ">=3.7"
 classifiers = [ "Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License", "Operating System :: OS Independent",]
-dependencies = [ "backports.tarfile == 1.2.0", "build == 1.2.1", "certifi == 2024.6.2", "cffi == 1.16.0", "charset-normalizer == 3.3.2", "cryptography == 42.0.8", "docutils == 0.21.2", "exceptiongroup == 1.2.1", "idna == 3.7", "importlib_metadata == 7.2.0", "iniconfig == 2.0.0", "jaraco.classes == 3.4.0", "jaraco.context == 5.3.0", "jaraco.functools == 4.0.1", "jeepney == 0.8.0", "keyring == 25.2.1", "markdown-it-py == 3.0.0", "mdurl == 0.1.2", "more-itertools == 10.3.0", "nh3 == 0.2.17", "numpy == 2.0.0", "packaging == 24.1", "pandas == 2.2.2", "patsy == 0.5.6", "pkginfo == 1.11.1", "pluggy == 1.5.0", "pycparser == 2.22", "Pygments == 2.18.0", "pyproject_hooks == 1.1.0", "pytest == 8.2.2", "python-dateutil == 2.9.0.post0", "pytz == 2024.1", "readme_renderer == 43.0", "requests == 2.32.3", "requests-toolbelt == 1.0.0", "rfc3986 == 2.0.0", "rich == 13.7.1", "scipy == 1.13.1", "SecretStorage == 3.3.3", "six == 1.16.0", "statsmodels == 0.14.2", "toml == 0.10.2", "tomli == 2.0.1", "twine == 5.1.0", "tzdata == 2024.1", "urllib3 == 2.2.2", "uuid == 1.30", "zipp == 3.19.2",]
+dependencies = [ "backports.tarfile == 1.2.0", "build == 1.2.1", "certifi == 2024.6.2", "cffi == 1.16.0", "charset-normalizer == 3.3.2", "cryptography == 42.0.8", "docutils == 0.21.2", "idna == 3.7", "importlib_metadata == 7.2.1", "jaraco.classes == 3.4.0", "jaraco.context == 5.3.0", "jaraco.functools == 4.0.1", "jeepney == 0.8.0", "keyring == 25.2.1", "markdown-it-py == 3.0.0", "mdurl == 0.1.2", "more-itertools == 10.3.0", "nh3 == 0.2.17", "numpy == 2.0.0", "packaging == 24.1", "pandas == 2.2.2", "patsy == 0.5.6", "pkginfo == 1.11.1", "pycparser == 2.22", "Pygments == 2.18.0", "pyproject_hooks == 1.1.0", "python-dateutil == 2.9.0.post0", "pytz == 2024.1", "readme_renderer == 43.0", "requests == 2.32.3", "requests-toolbelt == 1.0.0", "rfc3986 == 2.0.0", "rich == 13.7.1", "scipy == 1.13.1", "SecretStorage == 3.3.3", "six == 1.16.0", "statsmodels == 0.14.2", "toml == 0.10.2", "tomli == 2.0.1", "twine == 5.1.0", "tzdata == 2024.1", "urllib3 == 2.2.2", "zipp == 3.19.2",]
 [[project.authors]]
 name = "LJ. S.A."
 email = "lvjhn.mx@gmail.com"
 
 [build-system]
-requires = [ "hatchling",]
-build-backend = "hatchling.build"
+requires = [ "setuptools>=61.0",]
+build-backend = "setuptools.build_meta"
 
 [project.license]
 file = "LICENSE"
@@ -20,6 +20,3 @@ file = "LICENSE"
 [project.urls]
 Homepage = "https://github.com/lvjhn/demo-package-python"
 "Bug Tracker" = "https://github.com/lvjhn/demo-package-python/~/issues"
-
-[tool.hatch.build.targets.wheel]
-packages = [ "src/custom_bench",]

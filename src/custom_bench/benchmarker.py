@@ -22,7 +22,7 @@ class Benchmarker(BenchmarkItem):
         BenchmarkItem.__init__(self, **kwargs)
 
         # Items configuration 
-        self.has_items  = kwargs.get("has_items", True) 
+        self.has_items  = kwargs.get("has_items", False) 
         self.items_name = "contexts" 
         
         # Contexts associated with this benchmark
@@ -46,7 +46,7 @@ class Benchmarker(BenchmarkItem):
         """ 
         name = kwargs.get("name", None)
         description = kwargs.get("description", None)
-        with_units = kwargs.get("with_units", True)
+        with_units = kwargs.get("with_units", False)
 
         if not self.has_context(name):
             return self.create_context(name, description, with_units)
