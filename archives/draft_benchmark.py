@@ -656,7 +656,7 @@ class Summarizer:
 
         meta = {
             "outliers" : {
-                "std" : thres, 
+                "thres" : thres, 
                 "bounds" : {
                     "lower" : lb, 
                     "upper" : ub

@@ -1,66 +1,55 @@
 
 outliers_info = {
-    "std" : 2, 
-    "bounds" : {
-        "lower" : None,
-        "upper" : None
-    }, 
-    "qty" : {
-        "below_lb"  : None, 
-        "above_ub"  : None, 
-        "total"     : None
-    },
-    "perc_total" : {
-        "below_lb" : None, 
-        "above_ub" : None,
-        "both"     : None
-    },
-    "perc_outlier" : {
-        "below_lb" : None, 
-        "above_ub" : None
-    }
+    "thres"              : 2, 
+
+    "lb"                 : None, 
+    "ub"                 : None,
+    
+    "qty_below_lb"       : None,
+    "qty_above_ub"       : None,
+    
+    "b_lb_perc_total"    : None, 
+    "a_ub_perc_total"    : None,
+    "both_perc_total"    : None,
+    
+    "b_lb_perc_outlier"  : None, 
+    "a_ub_perc_outlier"  : None, 
 }
 
 items_summary_details = {
-    "mean"      : None, 
-    "mode"      : None, 
-    "median"    : None, 
-    "variance"  : None, 
-    "std_dev"   : None, 
-    "coef_var"  : None,
-    "skewness"  : None, 
-    "kurtosis"  : None, 
-    "percentiles" : {
-        "1"     : None,
-        "5"     : None, 
-        "10"    : None,
-        "20"    : None,
-        "25"    : None, 
-        "50"    : None,
-        "75"    : None, 
-        "90"    : None, 
-        "95"    : None, 
-        "99"    : None
-    },
-    "normality" : {
-        "sw"  : None, 
-        "ks"  : None, 
-        "ad"  : None
-    }, 
-    "stationarity" : {
-        "adf"   : None, 
-        "kpss"  : None
-    }
+    "mean"              : None, 
+    "mode_val"          : None, 
+    "mode_count"        : None,
+    "median"            : None, 
+    "variance"          : None, 
+    "std_dev"           : None, 
+    "coef_var"          : None,
+    "skewness"          : None, 
+    "kurtosis"          : None, 
+    "percentile_1"      : None, 
+    "percentile_5"      : None,
+    "percentile_10"     : None,
+    "percentile_20"     : None,
+    "percentile_25"     : None,
+    "percentile_50"     : None,
+    "percentile_75"     : None,
+    "percentile_80"     : None,
+    "percentile_90"     : None,
+    "percentile_95"     : None,
+    "percentile_99"     : None,
+    "normality_sw"      : None, 
+    "normality_ks"      : None, 
+    "normality_ad"      : None, 
+    "stationarity_adf"  : None, 
+    "stationarity_kpss" : None    
 }
 
 general_summary = {
     "start" : None, 
     "end" : None, 
     "skipped" : 0, 
-    "duration" : {
-        "with_skipped" : 0, 
-        "no_skipped" : 0
-    } 
+    "duration_ws" : 0, 
+    "duration_ns" : 0
 }
 
 multi_items = {
