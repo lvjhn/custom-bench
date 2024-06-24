@@ -9,6 +9,13 @@ benchmarker = Benchmarker(
 
 benchmarker.start() 
 
+benchmarker.skip_start()
+
+for i in range(500):
+    j = i ** 32
+
+benchmarker.skip_end()
+
 for i in range(1000): 
     j = i ** 3
 

@@ -36,7 +36,8 @@ class BenchmarkItem:
         # Meta Info. 
         self.meta = { 
             "name"        : self.name, 
-            "description" : self.description 
+            "description" : self.description,
+            "ran_at"      : self.run_datetime
         }
 
         # Summary Info. 
