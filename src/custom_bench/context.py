@@ -21,7 +21,7 @@ class Context(BenchmarkItem):
         BenchmarkItem.__init__(self, **kwargs)
 
         # Items configurations 
-        self.has_items  = True 
+        self.has_items  = kwargs.get("has_items", False) 
         self.items_name = "units"
 
         # Parameters 
@@ -40,7 +40,8 @@ class Context(BenchmarkItem):
         self.units = templates.multi_items.copy()
         
         # Register in state 
-        self.state["items"] = self.units
+        if self.has_items:
+            self.state["children"] = self.units
 
 
     def default_context_name(self): 

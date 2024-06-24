@@ -4,13 +4,11 @@ import math
 from statsmodels.stats.diagnostic import normal_ad
 from statsmodels.tsa.stattools import adfuller, kpss
 
-from.benchmark_item import BenchmarkItem 
-
 class Summarizer: 
     """ 
         Summarizes benchmark related information.
     """ 
-    def __init__(self, benchmark_item = BenchmarkItem()): 
+    def __init__(self, benchmark_item): 
         """ 
             Creates a new benchmark object.
         """ 
@@ -20,25 +18,25 @@ class Summarizer:
 
         self.mappings = {
             "mean"                  : self.get_mean, 
-            "mode_val"              : lambda X: self.get_mode_val(X)[0], 
-            "mode_count"            : lambda X: self.get_mode_val(X)[1], 
+            "mode_val"              : lambda X: self.get_mode(X)[0], 
+            "mode_count"            : lambda X: self.get_mode(X)[1], 
             "median"                : self.get_median, 
             "variance"              : self.get_variance, 
             "std_dev"               : self.get_std_dev, 
             "coef_var"              : self.get_coef_var, 
             "skewness"              : self.get_skewness,
             "kurtosis"              : self.get_kurtosis, 
-            "percentile_1"          : lambda X: self.get_percile(X, 1),
-            "percentile_5"          : lambda X: self.get_percile(X, 5),
-            "percentile_10"         : lambda X: self.get_percile(X, 10),
-            "percentile_20"         : lambda X: self.get_percile(X, 20),
-            "percentile_25"         : lambda X: self.get_percile(X, 25),
-            "percentile_50"         : lambda X: self.get_percile(X, 50),
-            "percentile_75"         : lambda X: self.get_percile(X, 75),
-            "percentile_80"         : lambda X: self.get_percile(X, 80),
-            "percentile_90"         : lambda X: self.get_percile(X, 90),
-            "percentile_95"         : lambda X: self.get_percile(X, 95),
-            "percentile_99"         : lambda X: self.get_percile(X, 99),
+            "percentile_1"          : lambda X: self.get_percentile(X, 1),
+            "percentile_5"          : lambda X: self.get_percentile(X, 5),
+            "percentile_10"         : lambda X: self.get_percentile(X, 10),
+            "percentile_20"         : lambda X: self.get_percentile(X, 20),
+            "percentile_25"         : lambda X: self.get_percentile(X, 25),
+            "percentile_50"         : lambda X: self.get_percentile(X, 50),
+            "percentile_75"         : lambda X: self.get_percentile(X, 75),
+            "percentile_80"         : lambda X: self.get_percentile(X, 80),
+            "percentile_90"         : lambda X: self.get_percentile(X, 90),
+            "percentile_95"         : lambda X: self.get_percentile(X, 95),
+            "percentile_99"         : lambda X: self.get_percentile(X, 99),
             "normality_sw"          : self.get_sw_t_p_value,
             "normality_ks"          : self.get_ks_t_p_value, 
             "normality_ad"          : self.get_ad_t_p_value, 
@@ -93,8 +91,10 @@ class Summarizer:
 
         # get outliers 
         with_outliers = self.make_sub_summary(unit_durations)
+        
         outliers_info, filtered = \
             self.make_outliers_info(with_outliers, unit_durations)
+
         no_outliers = self.make_sub_summary(filtered)
 
         # set in benchmark item 
@@ -190,7 +190,10 @@ class Summarizer:
             return "N/A"
 
     def get_percentile(self, X, p): 
-        return float(np.percentile(X, 1)) 
+        if len(X) < 2:
+            return "N/A" 
+        else: 
+            return float(np.percentile(X, 1)) 
 
     def get_sw_t_p_value(self, X):
         if len(X) < 10: 

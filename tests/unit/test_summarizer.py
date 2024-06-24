@@ -21,7 +21,7 @@ class TestBenchmarkItem:
     # Test .summarize() 
     # 
     def test_summarize_no_items(self): 
-        summarizer = Summarizer()
+        summarizer = Summarizer(BenchmarkItem())
 
         summarizer.benchmark_item.has_items = False 
         
@@ -34,7 +34,7 @@ class TestBenchmarkItem:
         summarizer.make_items_summary.assert_not_called()
 
     def test_summarize_with_items(self): 
-        summarizer = Summarizer()
+        summarizer = Summarizer(BenchmarkItem())
 
         summarizer.benchmark_item.has_items = True 
         
@@ -50,7 +50,7 @@ class TestBenchmarkItem:
     # Test .make_general_summary()
     # 
     def test_make_general_summary(self):
-        summarizer = Summarizer()
+        summarizer = Summarizer(BenchmarkItem())
 
         summarizer.benchmark_item.summary["start"] = 10
         summarizer.benchmark_item.summary["end"] = 20
@@ -72,7 +72,7 @@ class TestBenchmarkItem:
             def __init__(self, duration):
                 self.summary = { "duration_ns" : duration }
 
-        summarizer = Summarizer()
+        summarizer = Summarizer(BenchmarkItem())
         
         summarizer.make_sub_summary = Mock(
             side_effect=[
@@ -130,15 +130,13 @@ class TestBenchmarkItem:
         assert(items_summary["no_outliers"] == "sub-summary-b")
         summarizer.make_sub_summary.has_calls([call([1, 2, 3, 4])])
 
-
-
     #
     # Test .make_sub_summary() 
     # 
     def test_make_sub_summary(self):
         X = [10, 20, 30, 10, 20, 30, 10, 20, 30, 10]
 
-        summarizer = Summarizer() 
+        summarizer = Summarizer(BenchmarkItem()) 
 
         for item in summarizer.mappings:
             summarizer.mappings[item] = Mock() 
@@ -152,7 +150,7 @@ class TestBenchmarkItem:
     # Test .make_outliers_info()
     #
     def test_make_outliers_info(self): 
-        summarizer = Summarizer() 
+        summarizer = Summarizer(BenchmarkItem()) 
 
         X = [-10000, 10, 20, 30, 10, 20, 30, 10, 20, 30, 10000]
         Xr = {}
@@ -192,3 +190,8 @@ class TestBenchmarkItem:
         assert(tuple(summary.keys()) == keys)   
         assert(tuple(summary.values()) == values)   
         assert(len(filtered) == 3)
+
+
+
+
+     

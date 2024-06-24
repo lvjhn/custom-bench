@@ -17,7 +17,9 @@ class TestBenchmarker_Feature:
     # skip some portion, and end time.
     # 
     def test_benchmarker_setup(self):
-        benchmarker = Benchmarker()
+        benchmarker = Benchmarker(
+            has_items=False
+        )
         
         # start the benchmarker
         benchmarker.start() 
@@ -47,12 +49,12 @@ class TestBenchmarker_Feature:
             benchmarker.summary["start"]
         )
         assert(benchmarker.summary["skipped"] >= 0)
-        assert(benchmarker.summary["duration"]["with_skipped"] >= 0)
-        assert(benchmarker.summary["duration"]["no_skipped"] >= 0)
+        assert(benchmarker.summary["duration_ws"] >= 0)
+        assert(benchmarker.summary["duration_ns"] >= 0)
         assert(
-            benchmarker.summary["duration"]["with_skipped"] 
+            benchmarker.summary["duration_ws"] 
             >= 
-            benchmarker.summary["duration"]["no_skipped"] 
+            benchmarker.summary["duration_ns"] 
         )
 
     def test_benchmarker_can_add_context(self):

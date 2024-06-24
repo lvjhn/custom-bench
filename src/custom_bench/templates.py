@@ -14,6 +14,10 @@ outliers_info = {
     
     "b_lb_perc_outlier"  : None, 
     "a_ub_perc_outlier"  : None, 
+
+    "b_lb_perc_non_outlier"     : None, 
+    "a_ub_perc_non_outlier"     : None, 
+    "outlier_perc_non_outlier"  : None, 
 }
 
 items_summary_details = {

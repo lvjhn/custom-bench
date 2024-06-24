@@ -4,6 +4,8 @@ import time
 
 import custom_bench.templates as templates
 
+from .summarizer import Summarizer
+
 class BenchmarkItem:
 
     def __init__(self, **kwargs): 
@@ -17,7 +19,12 @@ class BenchmarkItem:
             kwargs.get("description", "A simple benchmark item.")
         self.datetime_format = \
             kwargs.get("datetime_format", "%Y-%m-%d %H:%M:%S")
+        self.Summarizer = \
+            kwargs.get("Summarizer", Summarizer)
 
+        # Create summarizer
+        self.summarizer = self.Summarizer(self)
+    
         # Items Configuration
         self.has_items = kwargs.get("has_items", False) 
         self.items_name = kwargs.get("items_name", None)
@@ -40,6 +47,8 @@ class BenchmarkItem:
             "meta"     : self.meta, 
             "summary"  : self.summary
         }
+
+        # Summarizer 
 
         # Other State Variables 
         self.misc = {
@@ -144,7 +153,7 @@ class BenchmarkItem:
             This function gets called after the
             benchmark item has been marked as ended.
         """ 
-        pass 
+        self.summarizer.summarize()
 
     def add_skip_time(self, skip_time): 
         """     
@@ -166,3 +175,21 @@ class BenchmarkItem:
             `n_children`.
         """ 
         self.n_children += 1
+
+    def collect(self): 
+        """ 
+            Transforms benchmark state into a JSON serializable
+            object. Extracting states from BenchmarkItem based 
+            component classes. 
+        """ 
+        root        = self.state 
+        has_items   = self.has_items 
+        items_name  = self.items_name
+
+        if has_items: 
+            items       = self.state[items_name]["items"]
+            root_items  = root[items_name]["items"] 
+            for item in items: 
+                root_items[item] = items[item].collect() 
+
+        return root

@@ -21,14 +21,15 @@ class Benchmarker(BenchmarkItem):
         BenchmarkItem.__init__(self, **kwargs)
 
         # Items configuration 
-        self.has_items  = True 
+        self.has_items  = kwargs.get("has_items", True) 
         self.items_name = "contexts" 
         
         # Contexts associated with this benchmark
         self.contexts = templates.multi_items.copy()
 
         # Register in state 
-        self.state["children"] = self.contexts
+        if self.has_items:
+            self.state["children"] = self.contexts
 
     def has_context(self, name): 
         """ 
@@ -74,6 +75,6 @@ class Benchmarker(BenchmarkItem):
         
         return context
         
-
-   
+  
+    
 

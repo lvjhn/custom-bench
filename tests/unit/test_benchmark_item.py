@@ -238,3 +238,49 @@ class TestBenchmarkItem:
         benchmark_item.add_children() 
 
         assert(benchmark_item.n_children == 3)
+
+    #
+    # Test .collect() 
+    #
+    def test_collect(self):
+        benchmark_item = BenchmarkItem() 
+
+        class ChildItem:
+            def __init__(self, val): 
+                self.state = val
+
+            def collect(self): 
+                return self.state
+
+        benchmark_item.state = {
+            "contexts" : {
+                "items" : {
+                    "context-a" : ChildItem(1), 
+                    "context-b" : ChildItem(2), 
+                    "context-c" : ChildItem(3), 
+                    "context-d" : ChildItem(4)
+                }
+            }
+        }
+
+        benchmark_item.has_items  = True 
+        benchmark_item.items_name = "contexts" 
+
+        root = benchmark_item.collect()     
+
+        assert(root["contexts"]["items"]["context-a"] == 1)
+        assert(root["contexts"]["items"]["context-b"] == 2)
+        assert(root["contexts"]["items"]["context-c"] == 3)
+        assert(root["contexts"]["items"]["context-d"] == 4)
+
+    #
+    # Test .after_end_fn()
+    # 
+    def test_after_end_fn(self):
+        benchmark_item = BenchmarkItem()
+
+        benchmark_item.summarizer.summarize = Mock() 
+
+        benchmark_item.after_end_fn() 
+
+        benchmark_item.summarizer.summarize.assert_called()
