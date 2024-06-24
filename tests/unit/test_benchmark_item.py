@@ -5,7 +5,9 @@ import datetime
 import time
 
 from custom_bench.benchmark_item import BenchmarkItem
+
 import custom_bench.context as context
+import custom_bench.templates as templates
 
 class TestBenchmarkItem: 
 
@@ -15,13 +17,47 @@ class TestBenchmarkItem:
 
     def test_constructor_defaults(self): 
         benchmark_item = BenchmarkItem()
+
         assert(type(benchmark_item.name) is uuid.UUID)
         assert(len(str(benchmark_item.name)) == 36)
+
+        assert(benchmark_item.description is not None)
+        assert(type(benchmark_item.description) is str)
+
+        assert(type(benchmark_item.run_datetime) is str)
+        assert(
+            datetime.datetime.strptime(
+                benchmark_item.run_datetime, 
+                benchmark_item.datetime_format
+            )
+        )
+
+        assert(type(benchmark_item.meta) is dict)
+        assert("name" in benchmark_item.meta)
+        assert("description" in benchmark_item.meta)
+
+        assert(
+            tuple(benchmark_item.summary.keys())
+            ==
+            tuple(templates.general_summary.keys())
+        )
+
+        assert(type(benchmark_item.state) is dict)
+        assert("meta" in benchmark_item.state)
+        assert("summary" in benchmark_item.state)
+        assert(benchmark_item.state["meta"] == benchmark_item.meta)
+        assert(benchmark_item.state["summary"] == benchmark_item.summary)
+
+        assert(hasattr(benchmark_item, "has_items"))
+        assert(benchmark_item.has_items == False)
+        assert(benchmark_item.items_name == None)
 
     def test_constructor_params(self):
         benchmark_item = BenchmarkItem(
             name="test-benchmark",
-            description="A simple benchmark used in testing."
+            description="A simple benchmark used in testing.",
+            has_items=True,
+            items_name="items"
         )
 
         assert(
@@ -31,10 +67,10 @@ class TestBenchmarkItem:
             benchmark_item.description == "A simple benchmark used in testing."
         )
         assert(
-            datetime.datetime.strptime(
-                benchmark_item.run_datetime, 
-                "%Y-%m-%d %H:%M:%S"
-            )
+            benchmark_item.has_items == True
+        )
+        assert(
+            benchmark_item.items_name == "items"
         )
 
     #
@@ -139,3 +175,66 @@ class TestBenchmarkItem:
         assert(benchmark_item.summary["skipped"] == 1.8) 
 
         benchmark_item.after_skip_end_fn.assert_called_with(0.8)
+
+    #
+    # Test .after_skip_end_fn()
+    # 
+    def test_after_skip_end_fn_no_parent(self): 
+        benchmark_item = BenchmarkItem() 
+
+        benchmark_item.parent = None 
+
+        assert(benchmark_item.after_skip_end_fn(1.5) == False)
+
+    def test_after_skip_end_fn_with_parent(self): 
+        benchmark_item = BenchmarkItem() 
+
+        benchmark_item.parent = Mock()
+        benchmark_item.parent.add_skip_time = Mock()
+
+        assert(benchmark_item.after_skip_end_fn(1.5) == True)
+
+        benchmark_item.parent.add_skip_time.assert_called_with(1.5)
+
+    #
+    # Test .add_skip_time() 
+    # 
+    def test_add_skip_time(self):
+        benchmark_item = BenchmarkItem() 
+
+        benchmark_item.summary["skipped"] = 1.5
+
+        benchmark_item.add_skip_time(1.5)
+
+        assert(benchmark_item.summary["skipped"] == 3.0)
+
+    #
+    # Test .children() 
+    # 
+    def test_children(self): 
+        benchmark_item = BenchmarkItem() 
+
+        benchmark_item.state = {
+            "children" : {
+                "items" : {
+                    "foo" : "bar",
+                    "bar" : "baz"
+                }
+            }
+        }
+
+        children = benchmark_item.children() 
+
+        assert(tuple(children.keys()) == ("foo", "bar"))
+
+    #
+    # Test .add_children()
+    # 
+    def test_add_children(self): 
+        benchmark_item = BenchmarkItem() 
+
+        benchmark_item.n_children = 2
+
+        benchmark_item.add_children() 
+
+        assert(benchmark_item.n_children == 3)

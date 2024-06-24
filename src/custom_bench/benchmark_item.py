@@ -5,6 +5,7 @@ import time
 import custom_bench.templates as templates
 
 class BenchmarkItem:
+
     def __init__(self, **kwargs): 
         """
             Creates a benchmark item (either a Benchmark, Context, or Unit)
@@ -13,11 +14,17 @@ class BenchmarkItem:
         self.name = \
             kwargs.get("name", uuid.uuid4()) 
         self.description = \
-            kwargs.get("description", "A simple benchmark.")
-    
+            kwargs.get("description", "A simple benchmark item.")
+        self.datetime_format = \
+            kwargs.get("datetime_format", "%Y-%m-%d %H:%M:%S")
+
+        # Items Configuration
+        self.has_items = kwargs.get("has_items", False) 
+        self.items_name = kwargs.get("items_name", None)
+
         # Automatically Initialized Variables 
         self.run_datetime = \
-            datetime.datetime.today().strftime("%Y-%m-%d %H:%M:%S")
+            datetime.datetime.today().strftime(self.datetime_format)
 
         # Meta Info. 
         self.meta = { 
@@ -38,6 +45,12 @@ class BenchmarkItem:
         self.misc = {
             "skip_start" : None
         }
+
+        # Parent (Optional)
+        self.parent = None
+
+        # No. of Children 
+        self.n_children = 0
 
     def info(self): 
         """ 
@@ -101,7 +114,7 @@ class BenchmarkItem:
 
         return skip_duration
 
-    def after_skip_start_fn(self, duration): 
+    def after_skip_start_fn(self): 
         """ 
             This function gets called after a skip
             portion has been marked as ended.
@@ -113,7 +126,11 @@ class BenchmarkItem:
             This function gets called after a skip
             portion has been marked as ended.
         """ 
-        pass
+        if self.parent:
+            self.parent.add_skip_time(duration)
+            return True 
+        else: 
+            return False
     
     def after_start_fn(self):
         """ 
@@ -127,4 +144,25 @@ class BenchmarkItem:
             This function gets called after the
             benchmark item has been marked as ended.
         """ 
-        pass
+        pass 
+
+    def add_skip_time(self, skip_time): 
+        """     
+            Adds skip time to the currently tracked
+            skip time when a contained item has marked
+            its end of a skipped portion.
+        """ 
+        self.summary["skipped"] += skip_time
+         
+    def children(self): 
+        """ 
+            Gets the items in the current benchmark item.
+        """ 
+        return self.state["children"]["items"]  
+
+    def add_children(self): 
+        """ 
+            Adds a children, increments the children count 
+            `n_children`.
+        """ 
+        self.n_children += 1

@@ -22,7 +22,8 @@ class TestBenchmarker:
     #          
     def test_has_context_exists(self): 
         benchmarker = Benchmarker() 
-        benchmarker.contexts["test-context"] = True 
+        benchmarker.contexts["items"] = {}
+        benchmarker.contexts["items"]["test-context"] = True 
         assert(benchmarker.has_context("test-context")) 
 
     def test_has_context_not_exists(self): 
@@ -35,14 +36,19 @@ class TestBenchmarker:
     # 
     def test_context_load(self):
         benchmarker = Benchmarker() 
-        benchmarker.contexts["test-context"] = "1234"
+        
+        benchmarker.contexts["items"] = {}
+        benchmarker.contexts["items"]["test-context"] = 1234 
 
-        assert(benchmarker.context(name="test-context") == "1234")
+        benchmarker.has_context = Mock(return_value=True) 
+
+        assert(benchmarker.context(name="test-context") == 1234)
     
     def test_context_new(self):
         benchmarker = Benchmarker() 
+
         benchmarker.has_context = Mock(return_value=False) 
-        benchmarker.create_context = Mock(return_value="4321")
+        benchmarker.create_context = Mock(return_value=4321)
 
         result = benchmarker.context(
             name="test-context",
@@ -50,7 +56,7 @@ class TestBenchmarker:
             with_units=True
         )
 
-        assert(result == "4321")
+        assert(result == 4321)
 
         benchmarker.create_context.assert_called_with(
             "test-context",
@@ -64,6 +70,8 @@ class TestBenchmarker:
     def test_create_context(self):
 
         benchmarker = Benchmarker(Context=Mock())
+
+        benchmarker.add_children = Mock()
 
         result = benchmarker.create_context(
             "test-context", 
@@ -81,3 +89,5 @@ class TestBenchmarker:
             benchmarker=benchmarker,
             with_units=True
         )
+
+        benchmarker.add_children.assert_called()

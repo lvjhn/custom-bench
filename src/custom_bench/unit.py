@@ -21,9 +21,11 @@ class Unit(BenchmarkItem):
             kwargs.get("description", self.default_unit_description())
         self.context = \
             kwargs.get("context", None)
+        self.parent = \
+            self.context
 
         # Summary 
-        self.summary = templates.general_summary
+        self.summary = templates.general_summary.copy()
 
     def default_unit_name(self): 
         """ 

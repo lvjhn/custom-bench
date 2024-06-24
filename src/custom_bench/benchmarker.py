@@ -16,21 +16,26 @@ class Benchmarker(BenchmarkItem):
             Creates a new benchmarker object.
         """ 
         self.Context = kwargs.get("Context", Context) 
-
+        
+        # Initialize benchmark item parent class
         BenchmarkItem.__init__(self, **kwargs)
+
+        # Items configuration 
+        self.has_items  = True 
+        self.items_name = "contexts" 
         
         # Contexts associated with this benchmark
         self.contexts = templates.multi_items.copy()
 
-        # Combine different substates together 
-        self.state["contexts"] = self.contexts
-       
+        # Register in state 
+        self.state["children"] = self.contexts
+
     def has_context(self, name): 
         """ 
             Checks if the current benchmark has a context 
             named `name` associated with it.
         """ 
-        return name in self.contexts
+        return name in self.contexts["items"]
 
     def context(self, **kwargs):
         """ 
@@ -44,7 +49,7 @@ class Benchmarker(BenchmarkItem):
         if not self.has_context(name):
             return self.create_context(name, description, with_units)
         else: 
-            return self.contexts[name]
+            return self.contexts["items"][name]
 
     def create_context(self, name, description, with_units): 
         """ 
@@ -63,9 +68,12 @@ class Benchmarker(BenchmarkItem):
         # add context to context container
         self.contexts["n_items"] += 1
         self.contexts["items"][name] = context 
+
+        # add children (increment count)
+        self.add_children()
         
         return context
-
+        
 
    
 

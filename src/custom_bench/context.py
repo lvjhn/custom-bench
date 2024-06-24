@@ -17,7 +17,12 @@ class Context(BenchmarkItem):
         """ 
         self.Unit = kwargs.get("Unit", Unit)
 
+        # Initialize benchmark item
         BenchmarkItem.__init__(self, **kwargs)
+
+        # Items configurations 
+        self.has_items  = True 
+        self.items_name = "units"
 
         # Parameters 
         self.name = \
@@ -28,18 +33,15 @@ class Context(BenchmarkItem):
             kwargs.get("benchmark", None)
         self.with_units = \
             kwargs.get("with_units", False)
-
-        # Summary 
-        self.summary = templates.general_summary.copy()
+        self.parent = \
+            self.benchmark
 
         # Units 
         self.units = templates.multi_items.copy()
+        
+        # Register in state 
+        self.state["items"] = self.units
 
-        # Base state 
-        self.state = {
-            "summary" : self.summary, 
-            "units" : self.units
-        }
 
     def default_context_name(self): 
         """ 
@@ -61,7 +63,7 @@ class Context(BenchmarkItem):
             Checks if the current context has a unit with
             the specified name.
         """ 
-        return name in self.units
+        return name in self.units["items"]
 
     def unit(self, **kwargs):
         """ 
@@ -74,7 +76,7 @@ class Context(BenchmarkItem):
         if not self.has_unit(name):
             return self.create_unit(name, description)
         else: 
-            return self.units[name]
+            return self.units["items"][name]
 
     def create_unit(self, name, description):
         """ 
@@ -92,5 +94,8 @@ class Context(BenchmarkItem):
         # add context to context container
         self.units["n_items"] += 1
         self.units["items"][name] = unit 
+
+        # add children (increment count)
+        self.add_children()
         
         return unit

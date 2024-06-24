@@ -39,7 +39,10 @@ class TestContext:
     # 
     def test_has_unit_exists(self): 
         context = Context() 
-        context.units["test-unit"] = True 
+
+        context.units["items"] = {}
+        context.units["items"]["test-unit"] = True 
+
         assert(context.has_unit("test-unit")) 
 
     def test_has_unit_not_exists(self): 
@@ -50,24 +53,26 @@ class TestContext:
     # Test .unit()
     # 
 
-    def test_context_load(self):
+    def test_unit_load(self):
         context = Context() 
-        context.units["test-unit"] = "1234"
 
-        assert(context.unit(name="test-unit") == "1234")
+        context.units["items"] = {}
+        context.units["items"]["test-unit"] = 1234
+
+        assert(context.unit(name="test-unit") == 1234)
     
-    def test_context_new(self):
+    def test_unit_new(self):
         context = Context() 
 
         context.has_unit = Mock(return_value=False) 
-        context.create_unit = Mock(return_value="4321")
+        context.create_unit = Mock(return_value=4321)
 
         result = context.unit(
             name="test-unit",
             description="A simple test unit."
         )
 
-        assert(result == "4321")
+        assert(result == 4321)
 
         context.create_unit.assert_called_with(
             "test-unit",
@@ -80,6 +85,8 @@ class TestContext:
     def test_create_unit(self):
 
         context = Context(Unit=Mock())
+
+        context.add_children = Mock()
 
         result = context.create_unit(
             "test-unit", 
@@ -95,4 +102,5 @@ class TestContext:
             description="test-description",
             context=context
         )
- 
+
+        context.add_children.assert_called()
