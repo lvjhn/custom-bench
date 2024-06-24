@@ -4,22 +4,29 @@ import json
 benchmarker = Benchmarker(
     name="Benchmarker-Demo", 
     description="A simple customized benchmarking demo.",
-    has_items=False
+    has_items=True
 )
 
 benchmarker.start() 
 
-benchmarker.skip_start()
+context_a = benchmarker.context(name="raise-by-2") 
+context_a.start() 
 
-for i in range(500):
-    j = i ** 32
+for i in range(100):
+    j = i ** 2
 
-benchmarker.skip_end()
+context_a.end()
 
-for i in range(1000): 
+
+context_b = benchmarker.context(name="raise-by-3") 
+context_b.start() 
+
+for i in range(100):
     j = i ** 3
+
+context_b.end()
+
 
 benchmarker.end() 
 
-
-print(json.dumps(benchmarker.state, indent=4))
+print(json.dumps(benchmarker.collect(), indent=4))

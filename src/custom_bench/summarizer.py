@@ -111,6 +111,7 @@ class Summarizer:
 
     def make_outliers_info(self, Xr, X): 
         Xn          = len(X)
+
         mean        = Xr["mean"]
         std_dev     = Xr["std_dev"]
         thres       = self.outlier_threshold
@@ -126,6 +127,27 @@ class Summarizer:
         n_below_lb    = len(below_lb)
         n_above_ub    = len(above_ub)  
 
+        b_lb_perc_total = n_below_lb/ Xn
+        a_ub_perc_total = n_above_ub / Xn
+        both_perc_total = n_outside_b / Xn
+
+        b_lb_perc_outlier = "N/A"
+        a_ub_perc_outlier = "N/A"
+        if n_outside_b > 0: 
+            b_lb_perc_outlier = n_below_lb / n_outside_b
+            a_ub_perc_outlier = n_above_ub / n_outside_b
+
+        a_ub_perc_outlier = n_above_ub / Xn
+
+        b_lb_perc_non_outlier    = "N/A"
+        a_ub_perc_non_outlier    = "N/A"
+        outlier_perc_non_outlier = "N/A" 
+        if n_within_b > 0: 
+            b_lb_perc_non_outlier = n_below_lb / n_within_b
+            a_ub_perc_non_outlier = n_above_ub / n_within_b,
+            outlier_perc_non_outlier = n_outside_b / n_within_b
+
+
         outliers_info = {   
             "thres"                         : thres, 
             "lb"                            : lb,
@@ -133,16 +155,16 @@ class Summarizer:
             "qty_below_lb"                  : n_below_lb, 
             "qty_above_ub"                  : n_above_ub,
     
-            "b_lb_perc_total"               : n_below_lb/ Xn, 
-            "a_ub_perc_total"               : n_above_ub / Xn, 
-            "both_perc_total"               : n_outside_b / Xn, 
+            "b_lb_perc_total"               : b_lb_perc_total, 
+            "a_ub_perc_total"               : a_ub_perc_total, 
+            "both_perc_total"               : both_perc_total, 
         
-            "b_lb_perc_outlier"             : n_below_lb / n_outside_b, 
-            "a_ub_perc_outlier"             : n_above_ub / Xn, 
+            "b_lb_perc_outlier"             : b_lb_perc_outlier, 
+            "a_ub_perc_outlier"             : a_ub_perc_outlier, 
             
-            "b_lb_perc_non_outlier"         : n_below_lb / n_within_b, 
-            "a_ub_perc_non_outlier"         : n_above_ub / n_within_b, 
-            "outlier_perc_non_outlier"      : n_outside_b / n_within_b
+            "b_lb_perc_non_outlier"         : b_lb_perc_non_outlier, 
+            "a_ub_perc_non_outlier"         : a_ub_perc_non_outlier, 
+            "outlier_perc_non_outlier"      : outlier_perc_non_outlier
         }
 
         return outliers_info, within_b

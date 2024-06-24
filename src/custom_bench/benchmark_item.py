@@ -185,11 +185,10 @@ class BenchmarkItem:
         """ 
         root        = self.state 
         has_items   = self.has_items 
-        items_name  = self.items_name
 
         if has_items: 
-            items       = self.state[items_name]["items"]
-            root_items  = root[items_name]["items"] 
+            items       = self.state["children"]["items"]
+            root_items  = root["children"]["items"] 
             for item in items: 
                 root_items[item] = items[item].collect() 
 
