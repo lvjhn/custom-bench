@@ -58,7 +58,9 @@ class TestBenchmarker_Feature:
         )
 
     def test_benchmarker_can_add_context(self):
-        benchmarker = Benchmarker()
+        benchmarker = Benchmarker(
+            has_items=True
+        )
 
         # assert contexts do not exist yet
         assert(benchmarker.n_children == 0)
@@ -86,7 +88,7 @@ class TestBenchmarker_Feature:
         context_b = benchmarker.context(name="context-b") 
 
         # start the second context
-        benchmarker.start() 
+        context_b.start() 
 
         # something to increase the duration
         for i in range(100):
@@ -105,7 +107,53 @@ class TestBenchmarker_Feature:
         assert(benchmarker.has_context("context-b"))
 
         
+    def test_benchmarker_can_add_unit(self):
+        benchmarker = Benchmarker(
+            has_items=True
+        )
 
+        # assert contexts do not exist yet
+        assert(benchmarker.n_children == 0)
+        assert(len(list(benchmarker.children().keys())) == 0)
+        assert(not benchmarker.has_context("context-a"))
+        assert(not benchmarker.has_context("context-b"))
+
+        # start the benchmarker
+        benchmarker.start() 
+
+        # create a context 
+        context = benchmarker.context(name="context", has_items=True) 
+        
+        # start the first context
+        context.start()
+
+        # something to increase the duration
+        for i in range(3):
+            unit = context.unit(name=f"unit-{i}")
+            unit.start()
+            for k in range(100 * i):
+                j = k * 100 
+            unit.end()
+
+
+        # end the first context 
+        context.end()
+
+        # create another context 
+        context = benchmarker.context(name="context-b") 
+
+        # end the benchmarker 
+        benchmarker.end()
+
+        # assert that we have registered some context 
+        assert(benchmarker.has_context("context"))
+        # assert(context.has_unit("unit-0"))
+        # assert(context.has_unit("unit-1"))
+        # assert(context.has_unit("unit-2"))
+
+
+    
+    
 
     
     

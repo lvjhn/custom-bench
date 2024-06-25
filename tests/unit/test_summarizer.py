@@ -165,6 +165,7 @@ class TestBenchmarkItem:
             'ub', 
             'qty_below_lb', 
             'qty_above_ub', 
+            "n_outliers",
             'b_lb_perc_total', 
             'a_ub_perc_total', 
             'both_perc_total', 

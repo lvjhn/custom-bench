@@ -19,7 +19,7 @@ class BenchmarkItem:
         self.description = \
             kwargs.get("description", "A simple benchmark item.")
         self.datetime_format = \
-            kwargs.get("datetime_format", "%Y-%m-%d %H:%M:%S")
+            kwargs.get("datetime_format", "%Y-%m-%d T%H:%M:%S%z")
         self.Summarizer = \
             kwargs.get("Summarizer", Summarizer)
 
@@ -167,7 +167,10 @@ class BenchmarkItem:
         """ 
             Gets the items in the current benchmark item.
         """ 
-        return self.state["children"]["items"]  
+        if self.has_items:
+            return self.state["children"]["items"]  
+        else:
+            return {}
 
     def add_children(self): 
         """ 

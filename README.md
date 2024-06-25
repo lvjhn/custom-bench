@@ -367,7 +367,7 @@ benchmarker.start()
 # 
 step_1 = benchmarker.context(
     name="Step 1 : Squares with * Operator",
-    with_units=True
+    has_items=True
 )
 step_1.start()
 

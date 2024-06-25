@@ -53,7 +53,7 @@ class TestBenchmarker:
         result = benchmarker.context(
             name="test-context",
             description="A simple test context.",
-            with_units=True
+            has_items=True
         )
 
         assert(result == 4321)
@@ -87,7 +87,7 @@ class TestBenchmarker:
             name="test-context",
             description="test-description",
             benchmarker=benchmarker,
-            with_units=True
+            has_items=True
         )
 
         benchmarker.add_children.assert_called()

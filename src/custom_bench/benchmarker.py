@@ -46,25 +46,25 @@ class Benchmarker(BenchmarkItem):
         """ 
         name = kwargs.get("name", None)
         description = kwargs.get("description", None)
-        with_units = kwargs.get("with_units", False)
+        has_items = kwargs.get("has_items", False)
 
         if not self.has_context(name):
-            return self.create_context(name, description, with_units)
+            return self.create_context(name, description, has_items)
         else: 
             return self.contexts["items"][name]
 
-    def create_context(self, name, description, with_units): 
+    def create_context(self, name, description, has_items): 
         """ 
             Creates a new context with the specified name 
             and description.
         """ 
-        
+
         # create new context
         context = self.Context(
             name=name, 
             description=description,
             benchmarker=self,
-            with_units=with_units
+            has_items=has_items
         )
 
         # add context to context container

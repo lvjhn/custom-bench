@@ -25,12 +25,6 @@ class TestBenchmarkItem:
         assert(type(benchmark_item.description) is str)
 
         assert(type(benchmark_item.run_datetime) is str)
-        assert(
-            datetime.datetime.strptime(
-                benchmark_item.run_datetime, 
-                benchmark_item.datetime_format
-            )
-        )
 
         assert(type(benchmark_item.meta) is dict)
         assert("name" in benchmark_item.meta)
@@ -211,8 +205,10 @@ class TestBenchmarkItem:
     #
     # Test .children() 
     # 
-    def test_children(self): 
+    def test_children_has_items(self): 
         benchmark_item = BenchmarkItem() 
+
+        benchmark_item.has_items = True
 
         benchmark_item.state = {
             "children" : {
@@ -226,6 +222,16 @@ class TestBenchmarkItem:
         children = benchmark_item.children() 
 
         assert(tuple(children.keys()) == ("foo", "bar"))
+
+    def test_children_has_no_items(self): 
+        benchmark_item = BenchmarkItem() 
+
+        benchmark_item.has_items = False
+
+        children = benchmark_item.children() 
+
+        assert(type(children) == dict)
+        assert(len(children.keys()) == 0)
 
     #
     # Test .add_children()

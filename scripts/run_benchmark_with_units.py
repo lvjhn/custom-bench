@@ -15,14 +15,15 @@ benchmarker.start()
 # 
 step_1 = benchmarker.context(
     name="Step 1 : Squares with * Operator",
-    with_units=True
+    has_items=True
 )
 step_1.start()
 
 for i in range(3):
     unit = step_1.unit(name=f"unit-{i}")
     unit.start()
-    j = i * i
+    for k in range(1000):
+        j = k * k
     unit.end() 
 
 step_1.end()

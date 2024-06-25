@@ -22,9 +22,7 @@ class Context(BenchmarkItem):
         BenchmarkItem.__init__(self, **kwargs)
 
         # Items configurations 
-        self.has_items  = kwargs.get(
-            "has_items", kwargs.get("with_units", False)
-        ) 
+        self.has_items  = kwargs.get("with_units", False)
         self.items_name = "units"
 
         # Parameters 
