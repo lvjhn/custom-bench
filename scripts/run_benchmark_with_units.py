@@ -21,6 +21,7 @@ step_1.start()
 
 for i in range(3):
     unit = step_1.unit(name=f"unit-{i}")
+
     unit.start()
     for k in range(1000):
         j = k * k
@@ -30,8 +31,9 @@ step_1.end()
 
 benchmarker.end() 
 
+
+
+
 # get the results as a JSON serializable object 
 # (serialized other classes)
 results = benchmarker.collect()
-
-print(json.dumps(results, indent=4))

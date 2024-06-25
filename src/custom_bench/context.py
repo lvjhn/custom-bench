@@ -21,21 +21,18 @@ class Context(BenchmarkItem):
         # Initialize benchmark item
         BenchmarkItem.__init__(self, **kwargs)
 
-        # Items configurations 
-        self.has_items  = kwargs.get("with_units", False)
-        self.items_name = "units"
-
+     
         # Parameters 
         self.name = \
             kwargs.get("name", self.default_context_name()) 
         self.description = \
             kwargs.get("description", self.default_context_description())
-        self.benchmark = \
-            kwargs.get("benchmark", None)
-        self.with_units = \
-            kwargs.get("with_units", False)
+        self.benchmarker = \
+            kwargs.get("benchmarker", None)
+        self.has_items = \
+            kwargs.get("has_items", False)
         self.parent = \
-            self.benchmark
+            self.benchmarker
 
         # Units 
         self.units = copy.deepcopy(templates.multi_items) 

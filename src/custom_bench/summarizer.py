@@ -14,7 +14,7 @@ class Summarizer:
         """ 
         self.benchmark_item = benchmark_item
 
-        self.outlier_threshold = 2
+        self.outlier_threshold = 1.5
 
         self.mappings = {
             "mean"                  : self.get_mean, 
@@ -119,7 +119,7 @@ class Summarizer:
         lb          = mean - thres * std_dev
         ub          = mean + thres * std_dev
         
-        within_b    = list(filter(lambda x: x > lb and x < ub, X))
+        within_b    = list(filter(lambda x: x >= lb and x <= ub, X))
         above_ub    = list(filter(lambda x: x > ub, X))
         below_lb    = list(filter(lambda x: x < lb, X))
         

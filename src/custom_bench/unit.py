@@ -27,9 +27,6 @@ class Unit(BenchmarkItem):
         self.parent = \
             self.context
 
-        # Summary 
-        self.summary = copy.deepcopy(templates.general_summary)
-
     def default_unit_name(self): 
         """ 
             Defines the default unit name when the `name`

@@ -195,3 +195,36 @@ class BenchmarkItem:
                 root_items[item] = items[item].collect() 
 
         return root
+
+    def get_duration_ns(self, benchmark_item): 
+        items = benchmark_item.state["children"]["items"].values()
+        return list(map(lambda x: x.state["summary"]["duration_ns"], items))
+
+    def get_start(self, benchmark_item): 
+        items = benchmark_item.state["children"]["items"].values()
+        return list(map(lambda x: x.state["summary"]["start"], items))
+    
+    def get_end(self, benchmark_item): 
+        items = benchmark_item.state["children"]["items"].values()
+        return list(map(lambda x: x.state["summary"]["end"], items))
+
+    def get_duration_ns_non_outliers(self, benchmark_item): 
+        items = \
+            list(benchmark_item.state["children"]["items"].values())
+        outliers_info = \
+            benchmark_item.state["children"]["items_summary"]["outliers_info"]
+        no_outliers = []
+
+        
+        for i in range(len(items)):
+            x = items[i].state["summary"]["duration_ns"]
+            if x >= outliers_info["lb"]:
+                no_outliers.append(x)
+            elif x <= outliers_info["ub"]:
+                no_outliers.append(x) 
+            else:
+                pass
+
+        return no_outliers
+
+    
